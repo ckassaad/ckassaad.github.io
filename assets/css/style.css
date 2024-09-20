@@ -245,6 +245,7 @@ img {
     width: 100%;
 }
 
+
 hr {
     margin-top: 15px;
     margin-bottom: 15px;
@@ -607,6 +608,15 @@ SOCIAL ICON
     position: relative;
     z-index: -1;
 }
+
+.ciphod img {
+    text-align: center;
+    width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
 .biography ul{
     padding:25px 20px 30px;
@@ -1276,6 +1286,7 @@ Resume Timeline
     color: #fff;  
 }
 
+
 .facts-section {
     background: url(../../assets/images/newton-cradle.jpg) no-repeat center center;
     background-attachment: fixed;
@@ -1447,6 +1458,7 @@ Icon for all respective meta
     background-size: cover;
     color: #fff;  
 }
+
 .hire-section-bg {
     padding: 110px 0;
     background: -webkit-linear-gradient(bottom, #C0C0C0, rgba(104, 195, 163, 0.7)); /*Safari 5.1-6*/
