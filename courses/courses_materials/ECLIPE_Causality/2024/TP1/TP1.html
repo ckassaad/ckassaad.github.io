@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+<meta name="generator" content="quarto-1.5.43">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Charles Assaad">
+<meta name="description" content="TP1 - DAG et identification.">
+
+<title>TP1 - DAG et identification</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="./style/quarto-nav.js"></script>
+<script src="./style/headroom.min.js"></script>
+<script src="./style/clipboard.min.js"></script>
+<script src="./style/autocomplete.umd.js"></script>
+<script src="./style/fuse.min.js"></script>
+<script src="./style/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="https://moodle-sante.sorbonne-universite.fr/moodle/pluginfile.php/322392/mod_resource/content/20/_book/presentation.html" rel="next">
+<script src="./style/quarto.js"></script>
+<script src="./style/popper.min.js"></script>
+<script src="./style/tippy.umd.min.js"></script>
+<script src="./style/anchor.min.js"></script>
+<link href="./style/tippy.css" rel="stylesheet">
+<link href="./style/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="./style/bootstrap.min.js"></script>
+<link href="./style/bootstrap-icons.css" rel="stylesheet">
+<link href="./style/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer",
+    "search-label": "Recherche"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="./style/webex.css">
+<style id="quarto-target-style">
+      section:target::before {
+        content: "";
+        display: block;
+        height: 41px;
+        margin: -41px 0 0;
+      }</style></head>
+
+<body class="nav-sidebar floating quarto-light" data-bs-offset="41" cz-shortcut-listen="true" style="padding-top: 41px;">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top headroom--top headroom--bottom">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="https://moodle-sante.sorbonne-universite.fr/moodle/pluginfile.php/322392/mod_resource/content/20/_book/" data-original-href="https://moodle-sante.sorbonne-universite.fr/moodle/pluginfile.php/322392/mod_resource/content/20/_book/index.html">Introduction</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Recherche" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article" style="min-height: calc(-41px + 100vh);">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto" style="top: 41px; max-height: calc(-41px + 100vh);">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      TP1 – DAG et identification
+    </div>
+      </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar" style="top: 41px; max-height: calc(-41px + 100vh);">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table des matières</h2>
+   
+  <ul>
+  <li>Introduction</li>
+  <li>Installer R</li>
+  <li>Exercice</li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">TP1 – DAG et identification</h1>
+</div>
+
+<div>
+  <div class="description">
+    Utilisation du package DAGitty sur R.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Auteur·rice</div>
+    <div class="quarto-title-meta-contents">
+             <p>Charles Assaad </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Date de publication</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">16 décembre 2024</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Modifié</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">14 décembre 2024</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="introduction" class="level1 unnumbered">
+<h1 class="unnumbered">Introduction</h1>
+<p>Bienvenue dans cette introduction à l’utilisation du package Dagitty sur R, un outil puissant pour la manipulation de graphes acycliques dirigés (DAGs)! Grâce à Dagitty, vous pourrez analyser des relations causales, explorer les dépendances conditionnelles, et identifier les effets causaux à partir de vos modèles graphiques.</p>
+
+<h1 class="unnumbered">Installer R et RStudio</h1>
+<p>R est un logiciel libre dédié à l’analyse statistique qui offre des facilités graphiques considérables. R est à la fois un logiciel et un language de programmation. Il est téléchargeable directement sur le site internet <a href="https://cran.r-project.org/">https://cran.r-project.org/</a> où se trouvent également les instuctions à suivre lors de l’installation pour chaque système d’exploitation (Mac OS X, Windows, GNU/Linux,...).</p> 
+
+<p>Une fois R correctement installé, rendez-vous sur <a href="http://www.rstudio.com/products/rstudio/download/">http://www.rstudio.com/products/rstudio/download/</a> pour télécharger la dernière version stable de RStudio, un environnement de développement gratuit, libre et multiplateforme pour R.</p>
+
+
+<p>Pour installer le package dagitty sur R il suffit d'exécutez la commande suivante dans le console de RStudio: install.packages("dagitty")
+ 
+<h1 class="unnumbered">Exerice</h1>
+<p>À partir du papier disponible <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9148671/"> ici</a> et en supposant que les variables non mesurées (représentées par "U") deviennent mesurées, répondez aux questions suivantes : 
+</p> 
+
+<ul>
+<li> Dessinez un DAG causal détaillé correspondant en utilisant  DAGitty sur R.  </li>
+<li>  À l’aide de DAGitty, identifiez un ensemble de variables qui d-séparent "codeine" de "U". Quel est cet ensemble? </li>
+<li> Utilisez DAGitty pour trouver un ensemble de variables satisfaisant le critère du back-door pour l’effet de "Chronic pain" sur "mortality". Quel est cet ensemble? </li>
+<li> en supposant une distribution positive, l'effet causal de "Chronic pain" sur "mortality" est-il identifiable? Justifiez votre réponse.  </li>
+</ul>
+
+
+
+</section>
+
+
+
+
+</body></html>
