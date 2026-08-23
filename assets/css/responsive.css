@@ -124,7 +124,7 @@
 		background-size: contain;
 		-webkit-background-size: contain; 
 		/* background-repeat: repeat; */
-		/* padding: 0;*/
+		padding: 0;
 		position: relative;
 		width: 100%;
     		aspect-ratio: 16 / 9;
