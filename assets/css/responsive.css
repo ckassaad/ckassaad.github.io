@@ -119,13 +119,13 @@
 	#home {
 		background: url(../images/causal_cycle_white.png) no-repeat center center;
 		-webkit-background-attachment: fixed;
-	    	background-attachment: fixed;
+	    	/* background-attachment: fixed; */
 		background-color: #222;
-		background-size: cover;
+		background-size: contain;
 		-webkit-background-size: contain; 
 		/* background-repeat: repeat; */
-		padding: 0;
-		position: relative;
+		/* padding: 0;*/
+		/* position: relative;*/
 	}	
 	.art-section {
 	    background: url(../../assets/images/petit_cheval_small.png) no-repeat center center;
