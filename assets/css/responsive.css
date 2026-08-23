@@ -121,13 +121,11 @@
 		-webkit-background-attachment: fixed;
 	    	/*background-attachment: fixed; */
 		background-color: #222;
-		background-size: contain;
-		-webkit-background-size: contain; 
+		background-size: cover;
+		-webkit-background-size: cover; 
 		/* background-repeat: repeat; */
 		padding: 0;
 		position: relative;
-		width: 100%;
-    		aspect-ratio: 16 / 9;
 	}	
 	.art-section {
 	    background: url(../../assets/images/petit_cheval_small.png) no-repeat center center;
