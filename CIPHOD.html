@@ -1,475 +1,168 @@
 <!DOCTYPE html>
-<html lang="en">
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="CIPHOD">
-  <meta name="keywords" content="">
-	<meta name="author" content="charles assaad">
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/><meta content="CIPHOD research team at the Sorbonne Public Health Institute: causal discovery, causal effects and root cause analysis." name="description"/><meta content="CIPHOD research team" name="author"/><meta content="light dark" name="color-scheme"/><meta content="CIPHOD" property="og:title"/><meta content="CIPHOD research team at the Sorbonne Public Health Institute: causal discovery, causal effects and root cause analysis." property="og:description"/><title>CIPHOD</title><link href="assets/images/ico/CIPHOD.png" rel="icon"/><link href="assets/css/modern.css" rel="stylesheet"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "ResearchOrganization", "name": "CIPHOD", "foundingDate": "2024", "parentOrganization": {"@type": "Organization", "name": "Sorbonne Public Health Institute"}}</script><script defer src="assets/js/publications.js"></script>
+<script defer src="assets/js/modern.js"></script></head><body class="team-page team-site" id="top"><header class="site-header"><div class="header-inner"><a class="brand" href="CIPHOD.html"><span class="brand-mark"><img alt="" src="assets/images/ico/CIPHOD.png"/></span><span>CIPHOD<small>Research team</small></span></a><nav aria-label="Main navigation" class="main-nav"><a aria-current="page" href="CIPHOD.html">Home</a><a href="CIPHOD.html#about">Research</a><a href="CIPHOD.html#publications">Publications</a><a href="CIPHOD.html#members">Members</a><a href="CIPHOD/organization.html">Activities</a><a href="CIPHOD/open_positions.html">Open positions</a><a class="nav-pyciphod" href="https://github.com/CIPHOD/pyCIPHOD">pyCIPHOD</a></nav><button aria-label="Switch color theme" class="theme-toggle" hidden="" type="button">Theme</button></div></header><main class="site-main" id="main">
+<section class="team-hero" id="home"><p class="eyebrow">Research team · Established 2024</p><img alt="CIPHOD logo" class="team-logo" src="assets/images/ico/CIPHOD.png"/>
+<h1>CIPHOD<span class="accent-dot">
+</span></h1><p class="hero-role">Causal inference for public health using observational datasets</p>
+<div class="institutional-affiliation">
 
-	<title>CIPHOD</title>
+    <p class="institute-name">
+        <a href="https://www.iplesp.fr/">
+            Sorbonne Public Health Institute · UMR-S 1136
+        </a>
+    </p>
 
-  <!-- Web Fonts -->
-  <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
-	<!-- Bootstrap core CSS -->
-	<link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
-	<!-- Font Awesome CSS -->
-	<link href="assets/css/font-awesome.min.css" rel="stylesheet" media="screen">
-	<!-- Animate css -->
-  <link href="assets/css/animate.css" rel="stylesheet">
-  <!-- Magnific css -->
-	<link href="assets/css/magnific-popup.css" rel="stylesheet">
-	<!-- Custom styles CSS -->
-	<link href="assets/css/style.css" rel="stylesheet" media="screen">
-  <!-- Responsive CSS -->
-  <link href="assets/css/responsive.css" rel="stylesheet">
+    <p class="institution-names">
+        Inserm · Sorbonne Université 
+    </p>
 
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-  <![endif]-->
+</div>
+<div class="hero-actions"><a class="primary-button" href="#members">Meet the team</a><a class="secondary-button" href="#publications">Explore publications</a><a class="secondary-button" href="https://github.com/CIPHOD/pyCIPHOD">pyCIPHOD</a></div></section>
 
-  <link rel="shortcut icon" href="assets/images/ico/CIPHOD.png">
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/images/ico/CIPHOD.png">
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/images/ico/CIPHOD.png">
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/images/ico/CIPHOD.png">
-  <link rel="apple-touch-icon-precomposed" href="assets/images/ico/CIPHOD.png">
-
-</head>
-
-<body>
-	<!-- Preloader -->
-<!--	<div id="tt-preloader">
-		<div id="pre-status">
-			<div class="preload-placeholder"></div>
-		</div>
-	</div>
--->
-
-
-
-
-	<!-- Navigation -->
-	<header class="header">
-		<nav class="navbar navbar-custom" role="navigation">
-			<div class="container">
-				<div class="navbar-header">
-
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#custom-collapse">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-<img src="./assets/images/ico/CIPHOD.png" alt="CIPHOD" width="140px" height="70px" />
-				</div>
-				<div class="collapse navbar-collapse" id="custom-collapse">
-					<ul class="nav navbar-nav navbar-left">
-						<li><a href="#about">About</a></li>
-						<!--<li><a href="#publications">Publications</a></li>-->
-						<!--<li><a href="#members">Members</a></li>-->
-					</ul>
-
-					<ul class="nav navbar-nav navbar-right">
-						<li><a href="https://github.com/CIPHOD/pyCIPHOD">PyCIPHOD</a></li>
-					  <li><a href="./CIPHOD/open_positions.html">Open positions</a></li>
-					  <li><a href="./CIPHOD/organization.html">Organization</a></li>		
-					</ul>
-				</div>
-			</div><!-- .container -->
-		</nav>
-
-	</header><!-- End Navigation -->
-
-
-    <!-- About Section -->
-    <section id="about" class="about-section section-padding">
-
-      <div class="container">
-
-        <h2 class="section-title wow fadeInUp">About the team</h2>
-
-
-            <div class="short-info wow fadeInUp">
-		<p> Founded in 2024, CIPHOD is a research team within the <a href="https://www.iplesp.fr/"> Sorbonne Public Health Institute</a>.
+<section class="about-section section-padding" id="about">
+<div class="container">
+<h2 class="section-title">About the team</h2>
+<div class="short-info">
+<p> Founded in 2024, CIPHOD is a research team within the <a href="https://www.iplesp.fr/"> Sorbonne Public Health Institute</a>.
 The general objective of the CIPHOD team is to develop novel theoretical results and innovative methodologies in causal inference, with a focus on their applicability and usefulness for epidemiologists. The team’s research is structured around three main axes: discovering causal graphs, identifying and estimating causal effects, and searching for root causes of anomalies.
 Across these three axes, the team places particular emphasis on integrating high-level background knowledge, such as causal graph abstractions, and on developing methods that can account for cyclic causal structures.
 </p>
-            
-             <!-- <ul class="list-check">
-		<li>Causal Discovery</li>
-                <li>Causal Inference</li>
-                <li>Root Cause Analysis</li>
-              </ul>
-
-              
-              <p>Applications:</p>
-              
-            <ul class="list-check">
-		<li>Epidemiology</li>
-              </ul>
-           -->
-
-<br>
-<br>
-        <div class="ciphod", class="service-box">         
-<img src="./assets/images/project_ciphod.png" alt="CIPHOD" class="center">
-        </div> 
-
-
-
-        </div> <!-- /.row -->
-      </div> <!-- /.container -->
-    </section><!-- End About Section -->
-
-
-
-    
-<section id="publications" class="contract-section section-padding">
-      <div class="container">
-	<h2 class="section-title wow fadeInUp">Publications</h2>
-	<ul>
-
-
-	   <li>
-	    <p>T. Loranchet, D. Bystrova, P. Burgat, J. Bellet, M. Bourlière, C. Lusivika-Nzinga, J. Nicol, L. Parlati, P-Y Boëlle, F. Carrat and C. K. Assaad. Local causal discovery in epidemiology: quantifying the direct effect of diabetes on severe liver fibrosis in patients with viral hepatitis. BMC Medical Research Methodology. 2026.
-	<cite><a href=""><i> Soon </i></a></cite></p>
-	  </li> 
-
-	<li>
-	    <p>W. Scott, E. Valdano, and C. K. Assaad. Missing data and cluster graphs: cluster level missingness vs variable-level missingness. Advances in Neural Information Processing Systems (Neurips). 2026. <cite><a href=""><i>Soon</i></a></cite></p>
-	</li> 
-
-	<li>
-	    <p>D. Bystrova, C. K. Assaad, S. Si-moussi, and W. Thuiller. Macro-level causal discovery from single-time-point observations of ecological dynamical systems. Philosophical Transactions of the Royal Society B. 2026. <cite><a href=""><i>Soon</i></a></cite></p>
-	  </li> 
-
-	<li>
-	    <p>S. Ferreira and C. K. Assaad. Average controlled and average natural micro direct effects in summary causal graphs. The 42nd Conference on Uncertainty in Artificial Intelligence (UAI). 2026. <cite><a href="https://openreview.net/pdf?id=Q1S3eU7Vc1"><i>Link</i></a></cite></p>
-	  </li> 
-
-
-	<li>
-	    <p>F. Baldo and C. K. Assaad. Regret-based federated causal discovery with unknown interventions. The 43rd International Conference on Machine Learning (ICML). 2026. <cite><a href="https://openreview.net/pdf?id=X1Ro597lLJ"><i>Link</i></a></cite></p>
-	  </li> 
-
-
-	   <li>
-	    <p>T. Loranchet and C. K. Assaad. Orientability of causal relations in time series using summary causal graphs and faithful distributions. Conference on Artificial Intelligence and Statistics (AISTATS). 2026.
-	<cite><a href="https://openreview.net/forum?id=CORGtiRxxo"><i> Link </i></a></cite></p>
-	  </li> 
-
-	<li>
-	    <p>T. Loranchet and C. K. Assaad. Local Markov equivalence and local causal discovery for identifying controlled direct effects. The 5th Conference on Causal Learning and Reasoning (Clear). 2026.
-		<cite><a href="https://openreview.net/forum?id=1VP44jJu6S"><i>Link</i></a></cite><i> (selected for an oral presentation)</i></p>
-	  </li> 
-
-
-	<li>
-	    <p> F. Baldo, S. Ferreira and C. K. Assaad. Retrieving Classes of Causal Orders with Inconsistent Knowledge Bases. The 5th Conference on Causal Learning and Reasoning (Clear). 2026.
-		<cite><a href="https://openreview.net/forum?id=hMaHG2AnL9"><i>Link</i></a></cite></p>
-	  </li> 
-
-	<li>
-	    <p>S. Ferreira and C. K. Assaad. Identifying Macro Causal Effects in C-DMGs over DMGs. Advances in Neural Information Processing Systems (Neurips). 2025.
-		<cite><a href="https://openreview.net/forum?id=nM9j2F7jL3"><i>Link</i></a></cite></p>
-	  </li> 
-	<li>
-
-	<li>
-	    <p>S. Ferreira and C. K. Assaad. Identifying Macro Causal Effects in C-DMGs over ADMGs. Transactions on Machine Learning Research. 2025.
-		<cite><a href="https://openreview.net/pdf?id=905LEugq6R"><i>Link</i></a></cite></p>
-	  </li> 
-	  <li>
-	    <p>C. K. Assaad. Towards identifiability of micro total effects in summary causal graphs with latent confounding:  extension of  the front-door criterion. Transactions on Machine Learning Research. 2025.
-		<cite><a href="https://openreview.net/forum?id=5f7YlSKG1l"><i>Link</i></a></cite></p>
-	  </li> 
-	<li>
-	    <p>C. K. Assaad. Causal reasoning in difference graphs. The 4th Conference on Causal Learning and Reasoning (CLeaR). 2025.
-		<cite><a href="https://openreview.net/pdf?id=yYGdFo4kKb"><i>Link</i></a></cite> <i>(selected for an oral presentation)</i> </p> 
-	  </li> 
-	<li>
-	    <p>S. Ferreira and C. K. Assaad. Identifying macro conditional independencies and macro total effects in summary causal graphs with latent confounding. The 39th AAAI Conference on Artificial Intelligence. 2025.
-		<cite><a href="https://ojs.aaai.org/index.php/AAAI/article/view/34882"><i>Link</i></a></cite> <i>(selected for an oral presentation)</i> </p>
-	  </li> 
-	   <li>
-	    <p>B. Glemain, C. K. Assaad, W. Ghosn, P. Moulaire, X. de Lamballerie, M. Zins, G. Severi, M. Touvier, J.F. Deleuze, SAPRIS-SERO Study Group, N. Lapidus, F. Carrat. Revisiting the link between COVID-19 incidence and infection fatality rate during the first pandemic wave. 2025.
-		<cite><a href="https://www.nature.com/articles/s41598-025-99078-6"><i> Link </i></a></cite></p>
-	  </li> 
-	   <li>
-	    <p>L. Zan, C. K. Assaad, E. Devijver, E. Gaussier, and A. Ait-Bachir. On the fly detection of root causes from observed data with application to IT systems. ACM International
-Conference on Information and Knowledge Management (CIKM). 2024.
-		<cite><a href="https://dl.acm.org/doi/10.1145/3627673.3680010"><i>Link</i></a></cite></p>
-	  </li> 
-	   <li>
-	    <p>C. K. Assaad, E. Devijver, E. Gaussier, G. Goessler, and A. Meynaoui. Identifiability of total effects from abstractions of time series causal graphs. The 40th Conference on Uncertainty in Artificial Intelligence (UAI). 2024.
-		<cite><a href="https://proceedings.mlr.press/v244/assaad24a.html"><i>Link</i></a></cite></p>
-	  </li> 
-	  <li>
-	    <p>D. Bystrova, C. K. Assaad, J. Arbel, E. Devijver, E. Gaussier, and W. Thuiller. Causal Discovery from Time Series with Hybrids of Constraint-Based and Noise-Based Algorithms. Transactions on Machine Learning Research. 2024.
-		<cite><a href="https://openreview.net/forum?id=PGLbZpVk2n"><i>Link</i></a></cite></p>
-	  </li> 
+<br/>
+<br/>
+<div class="service-box">
+<img alt="CIPHOD" class="center" decoding="async" loading="lazy" src="./assets/images/project_ciphod.png"/>
+</div>
+</div>
+</div>
+</section><section class="section-padding publications-section" id="publications">
+<div class="container">
+<h2 class="section-title">Publications</h2><div class="publication-tools" hidden=""><label>Search publications<input data-pub-search="" placeholder="Title, author, venue…" type="search"/></label><label>Year<select data-pub-year=""><option value="">All years</option></select></label><button data-pub-reset="" type="button">Clear</button><p data-pub-count="" role="status"></p></div><p class="pub-note">Search and year filters are active. Use Paper for the publication page or PDF, BibTeX to expand the citation entry, and Abstract to expand the abstract panel on the page.</p>
+<ul class="publication-list"
+    data-publications="ciphod"
+    data-category="publication">
 </ul>
 
 <b>Workshops (only contributions not yet published as full papers are included)</b>
-	<ul>
-
-	<li>
-	    <p>A. Ruer, T. Loranchet, D. Bystrova, and C. K. Assaad. Root cause analysis via difference graph discovery from linear time-series data. The ECML PKDD workshop on Causal Anomalies: Exploring Synergies of Anomaly Detection and Causal Inference Workshop. 2026.
-		<cite><a href="https://arxiv.org/abs/2608.21117"><i>Link</i></a> (selected for an oral presentation)</cite> </p>
-	  </li> 
-
-	<li>
-	    <p>L. Zan, C. K. Assaad, E. Devijver, and Eric Gaussier. Beyond stationarity in time series: discovering causal structures and latent regimes via Markov blankets. The ECML PKDD workshop on Advanced Analytics and Learning on Temporal Data. 2026.
-		<cite><a href="https://arxiv.org/abs/2609.05150"><i>Link</i></a></cite></p>
-	  </li> 
-
-
-<li>
-	    <p> J. Bastard, C. K. Assaad, R. Marti,  A. Tran, R. Metras, and B. Durand. Short- and long-term causes of West Nile virus risk in Europe: a spatiotemporal model accounting for under-reporting. The Bi-annual international meeting on spatial epidemiology. 2026.<cite><a href="https://www.medrxiv.org/content/10.64898/2026.08.20.26360902v1"><i>Link</i></a></cite></p>
-	  </li> 
-
-
-	<li>
-	    <p> H. T. Zoumenou, S. Ferreira, C. K. Assaad, N. Lapidus, D. Bystrova, and B. Glemain. Time Partitioning in Target Trial Emulation. The 47th Annual Conference of the International Society for Clinical Biostatistics  together with the 71st Annual Conference of the German Association for Medical Informatics, Biometry and Epidemiology. 2026.
-		<cite><a href="https://arxiv.org/abs/2603.15924"><i>Link</i></a></cite></p>
-	  </li> 
-
-<!--
-	<li>
-	    <p>T. Loranchet and C. K. Assaad. Local Markov equivalence and local causal discovery for identifying controlled direct effects. The UAI Workshop on on Causal Abstractions and Representations. 2025.
-		<cite><a href="https://arxiv.org/abs/2505.02781"><i>Link</i></a></cite></p>
-	  </li> 
-	<li>
-	    <p>S. Ferreira and C. K. Assaad. Identifying Macro Causal Effects in C-DMGs over DMGs. The UAI Workshop on on Causal Abstractions and Representations. 2025.
-		<cite><a href="https://arxiv.org/abs/2506.19650"><i>Link</i></a></cite></p>
-	  </li> 
-	<li>
-	    <p>F. Baldo, S. Ferreira and C. K. Assaad. Discovering maximally consistent distribution of causal tournaments with Large Language Models. The UAI Workshop on on Causal Abstractions and Representations. 2025.
-		<cite><a href="https://arxiv.org/abs/2412.14019"><i>Link</i></a></cite> (selected for an oral presentation)</p>
-	  </li> 
-	   <li>
-	    <p>S. Ferreira and C. K. Assaad. Identifying macro conditional independencies and macro total effects in summary causal graphs with latent confounding. The UAI Workshop on Causal Inference For Time Series. 2024.
-		<cite><a href="https://arxiv.org/abs/2407.07934"><i>Link</i></a></cite></p>
-	  </li> 
--->
+<ul class="publication-list"
+    data-publications="ciphod"
+    data-category="workshop">
 </ul>
-
 
 <b>Preprints (only contributions not yet published as full papers or presented at workshops are included)</b>
-
-	<ul>
-	<!--<li>
-	    <p>T. Loranchet and C. K. Assaad. Necessary and sufficient conditions for identifying micro causal effects using summary causal graphs and faithful distributions. 2025.
-		<cite><a href=""><i>Soon</i></a></cite></p>
-	  </li>--> 
-	   <li>
-	    <p>I. Belciug, S. Ferreira and C. K. Assaad. On efficient adjustment for micro causal effects in summary causal graphs. 2025.
-	<cite><a href="https://www.arxiv.org/abs/2512.18315"><i> Link </i></a></cite></p>
-	  </li> 
-	   <li>
-	    <p>C. Yvernes, C. K. Assaad, E. Devijver, and Eric Gaussier. Identifiability by common backdoor in summary causal graphs of time series. 2025.
-	<cite><a href="https://arxiv.org/abs/2506.14862"><i> Link </i></a></cite></p>
-	  </li> 
+<ul class="publication-list"
+    data-publications="ciphod"
+    data-category="preprint">
 </ul>
-      </div>
-    </section>
 
-
-
-
-
-<section id="members" class="contract-section section-padding">
-      <div class="container">
-	<h2 class="section-title wow fadeInUp">Members</h2>
-
-
+</div>
+</section><section class="contract-section section-padding" id="members">
 <div class="container">
-<div class="row">
-  <div class="col-lg-3">
-    <div class="container">
-      <img src="./assets/images/members_CIPHOD/charlesassaad.jpg" alt="Charles" style="max-width: 15%; background-size: contain; margin: auto; position: relative; z-index: -1;">
-        <h4><a href="https://ckassaad.github.io/">Charles Assaad</a></h4>
-        <p class="title">Team leader</p>
-    </div>
-  </div>
-
-
-  <div class="col-lg-3">
-      <div class="container">
-      <img src="./assets/images/members_CIPHOD/efrainflores.jpg" alt="Efraín" style="max-width: 15%; background-size: contain; margin: auto; position: relative; z-index: -1;">
-        <h4> <a href=""> Efraín Flores</a></h4>
-        <p class="title">Biostatistician</p>
-    </div>
-  </div>
-
-
-
-
-
-  <div class="col-lg-3">
-      <div class="container">
-      <img src="./assets/images/members_CIPHOD/simonferreira.jpg" alt="Simon" style="max-width: 15%; background-size: contain; margin: auto; position: relative; z-index: -1;">
-        <h4> <a href="https://perso.ens-lyon.fr/simon.ferreira/">Simon Ferreira</a> </h4>
-        <p class="title">PhD Student</p>
-      </div>
-  </div>
-
-
-  <div class="col-lg-3">
-    <div class="container">
-      <img src="./assets/images/members_CIPHOD/marikakosohorská.png" alt="Marika" style="max-width: 15%; background-size: contain; margin: auto; position: relative; z-index: -1;">
-        <h4><a href="">Marika Kosohorská</a></h4>
-        <p class="title"> PhD Student </p>
-    </div>
-  </div>
-
-  <div class="col-lg-3">
-    <div class="container">
-      <img src="./assets/images/members_CIPHOD/timotheeloranchet.jpg" alt="Timothée" style="max-width: 15%; background-size: contain; margin: auto; position: relative; z-index: -1;">
-        <h4><a href="">Timothée Loranchet</a></h4>
-        <p class="title"> PhD Student </p>
-    </div>
-  </div>
-
-
-  <div class="col-lg-3">
-    <div class="container">
-      <img src="./assets/images/members_CIPHOD/denisnash.jpg" alt="Denis" style="max-width: 15%; background-size: contain; margin: auto; position: relative; z-index: -1;">
-        <h4><a href="https://en.wikipedia.org/wiki/Denis_Nash">Denis Nash</a></h4>
-        <p class="title"> Professor </p>
-    </div>
-  </div>
-
-  <div class="col-lg-3">
-    <div class="container">
-      <img src="./assets/images/members_CIPHOD/willowscott.png" alt="Willow" style="max-width: 15%; background-size: contain; margin: auto; position: relative; z-index: -1;">
-        <h4><a href="https://willowjscott.notion.site/homepage">Willow Scott</a></h4>
-        <p class="title"> PhD Student </p>
-    </div>
-  </div>
-
-
-
-
-</div>
-</div>
-
-
-
-<h3 class="section-title wow fadeInUp"">Past members</h3>
-
-
+<h2 class="section-title">Members</h2>
 <div class="container">
-<div class="row">
-
-  <div class="col-lg-3">
-    <div class="container">
-      <img src="./assets/images/members_CIPHOD/anoukruer.jpg" alt="Anouk" style="max-width: 15%; background-size: contain; margin: auto; position: relative; z-index: -1;">
-        <h4><a href="">Anouk Ruer</a></h4>
-        <p class="title"> Intern </p>
-    </div>
-  </div>
-
-
-  <div class="col-lg-3">
-      <div class="container">
-      <img src="./assets/images/members_CIPHOD/federicobaldo.jpg" alt="Federico" style="max-width: 15%; background-size: contain; margin: auto; position: relative; z-index: -1;">
-        <h4> <a href="https://federic0bald0.github.io/federicobaldo.github.io/">Federico Baldo</a></h4>
-        <p class="title">Postdoc</p>
-    </div>
-  </div>
-
-
-
-  <div class="col-lg-3">
-    <div class="container">
-      <img src="./assets/images/members_CIPHOD/isabelabelciug.png" alt="Isabela" style="max-width: 15%; background-size: contain; margin: auto; position: relative; z-index: -1;">
-        <h4><a href=""> Isabela Belciug </a></h4>
-        <p class="title">Intern</p>
-    </div>
-  </div>
-
-  <div class="col-lg-3">
-    <div class="container">
-      <img src="./assets/images/members_CIPHOD/sehanebelhouari.jpg" alt="Timothée" style="max-width: 15%; background-size: contain; margin: auto; position: relative; z-index: -1;">
-        <h4><a href="">Séhane Bel</a></h4>
-<h4><a href=""> Houari-Durand</a></h4>
-        <p class="title"> Intern </p>
-    </div>
-  </div>
-
-
-  <div class="col-lg-3">
-    <div class="container">
-      <img src="./assets/images/members_CIPHOD/sarahsemlali.png" alt="Sara" style="max-width: 15%; background-size: contain; margin: auto; position: relative; z-index: -1;">
-        <h4><a href=""> Sarah Semlali</a></h4>
-        <p class="title"> Intern </p>
-    </div>
-  </div>
-
+<div class="member-grid">
+<div class="member-card">
+<div class="container">
+<img alt="Charles Assaad" decoding="async" height="360" loading="lazy" src="assets/images/members_CIPHOD/charlesassaad-web.webp" width="360"/>
+<h4><a href="index.html">Charles Assaad</a></h4>
+<p class="title">Team leader</p>
 </div>
 </div>
-
-
-</section>
-
-
-
-
-	      
-	<!-- Footer Section -->
-    <footer class="footer-wrapper">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="copyright text-center">
-              <p>&copy; CIPHOD 2026. All rights reserved.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer><!-- End Footer Section -->
-
-
-	<!-- Scroll-up -->
-	<div class="scroll-up">
-		<a href="#home"><i class="fa fa-angle-up"></i></a>
-	</div>
-
-	<!-- Javascript files -->
-	<script src="assets/js/jquery.js"></script>
-	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
-  <script src="assets/js/jquery.stellar.min.js"></script>
-	<script src="assets/js/jquery.sticky.js"></script>
-  <script src="assets/js/smoothscroll.js"></script>
-	<script src="assets/js/wow.min.js"></script>
-  <script src="assets/js/jquery.countTo.js"></script>
-  <script src="assets/js/jquery.inview.min.js"></script> 
-  <script src="assets/js/jquery.easypiechart.js"></script>
-  <script src="assets/js/jquery.shuffle.min.js"></script>
-  <script src="assets/js/jquery.magnific-popup.min.js"></script>
-  <script src="http://a.vimeocdn.com/js/froogaloop2.min.js"></script>
-  <script src="assets/js/jquery.fitvids.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
-  <script src="assets/js/scripts.js"></script>
-	
-	<script>
-	function bigImg(x) {
-	    x.style.height = "64px";
-	    x.style.width = "64px";
-	}
-
-	</script>	
-	
-	<script>
-		n =  new Date();
-		y = n.getFullYear()-2017
-		document.getElementById("date_experience").innerHTML = y;
-	</script>
-
-</body>
-</html>
+<div class="member-card">
+<div class="container">
+<img alt="Efraín Flores" decoding="async" height="360" loading="lazy" src="assets/images/members_CIPHOD/efrainflores-web.webp" width="360"/>
+<h4> <span> Efraín Flores</span></h4>
+<p class="title">Biostatistician</p>
+</div>
+</div>
+<div class="member-card">
+<div class="container">
+<img alt="Simon Ferreira" decoding="async" height="360" loading="lazy" src="assets/images/members_CIPHOD/simonferreira-web.webp" width="360"/>
+<h4> <a href="https://perso.ens-lyon.fr/simon.ferreira/">Simon Ferreira</a> </h4>
+<p class="title">PhD Student</p>
+</div>
+</div>
+<div class="member-card">
+<div class="container">
+<img alt="Marika Kosohorská" decoding="async" height="360" loading="lazy" src="assets/images/members_CIPHOD/marika-kosohorska-web.webp" width="360"/>
+<h4><span>Marika Kosohorská</span></h4>
+<p class="title"> PhD Student </p>
+</div>
+</div>
+<div class="member-card">
+<div class="container">
+<img alt="Timothée Loranchet" decoding="async" height="360" loading="lazy" src="assets/images/members_CIPHOD/timotheeloranchet-web.webp" width="360"/>
+<h4><span>Timothée Loranchet</span></h4>
+<p class="title"> PhD Student </p>
+</div>
+</div>
+<div class="member-card">
+<div class="container">
+<img alt="Denis Nash" decoding="async" height="360" loading="lazy" src="assets/images/members_CIPHOD/denisnash-web.webp" width="360"/>
+<h4><a href="https://en.wikipedia.org/wiki/Denis_Nash">Denis Nash</a></h4>
+<p class="title"> Professor </p>
+</div>
+</div>
+<div class="member-card">
+<div class="container">
+<img alt="Willow Scott" decoding="async" height="360" loading="lazy" src="assets/images/members_CIPHOD/willowscott-web.webp" width="360"/>
+<h4><a href="https://willowjscott.notion.site/homepage">Willow Scott</a></h4>
+<p class="title"> PhD Student </p>
+</div>
+</div>
+</div>
+</div>
+<h3 "="" class="section-title">Past members</h3>
+<div class="container">
+<div class="member-grid">
+<div class="member-card">
+<div class="container">
+<img alt="Anouk Ruer" decoding="async" height="360" loading="lazy" src="assets/images/members_CIPHOD/anoukruer-web.webp" width="360"/>
+<h4><span>Anouk Ruer</span></h4>
+<p class="title"> Intern </p>
+</div>
+</div>
+<div class="member-card">
+<div class="container">
+<img alt="Federico Baldo" decoding="async" height="360" loading="lazy" src="assets/images/members_CIPHOD/federicobaldo-web.webp" width="360"/>
+<h4> <a href="https://federic0bald0.github.io/federicobaldo.github.io/">Federico Baldo</a></h4>
+<p class="title">Postdoc</p>
+</div>
+</div>
+<div class="member-card">
+<div class="container">
+<img alt="Isabela Belciug" decoding="async" height="360" loading="lazy" src="assets/images/members_CIPHOD/isabelabelciug-web.webp" width="360"/>
+<h4><span> Isabela Belciug </span></h4>
+<p class="title">Intern</p>
+</div>
+</div>
+<div class="member-card">
+<div class="container">
+<img alt="Séhane Bel" decoding="async" height="360" loading="lazy" src="assets/images/members_CIPHOD/sehanebelhouari-web.webp" width="360"/>
+<h4><span>Séhane Bel</span></h4>
+<h4><span> Houari-Durand</span></h4>
+<p class="title"> Intern </p>
+</div>
+</div>
+<div class="member-card">
+<div class="container">
+<img alt="Sarah Semlali" decoding="async" height="207" loading="lazy" src="assets/images/members_CIPHOD/sarahsemlali-web.webp" width="207"/>
+<h4><span> Sarah Semlali</span></h4>
+<p class="title"> Intern </p>
+</div>
+</div>
+</div>
+</div>
+</div></section></main>
+<footer class="site-footer"><div><strong>CIPHOD</strong></div>
+<div>
+    <a href="CIPHOD.html">Home</a> ·
+    <a href="#about">Research</a> ·
+    <a href="#publications">Publications</a> ·
+    <a href="#members">Members</a> ·
+    <a href="CIPHOD/organization.html">Activities</a> ·
+    <a href="CIPHOD/open_positions.html">Open positions</a> ·
+    <a href="https://github.com/CIPHOD/pyCIPHOD">pyCIPHOD</a>
+</div>
+<a href="#top">Back to top ↑</a></footer>
+</body></html>

@@ -1,0 +1,850 @@
+[
+  {
+    "id": "loranchet2026localcausaldisco",
+    "title": "Local causal discovery in epidemiology: quantifying the direct effect of diabetes on severe liver fibrosis in patients with viral hepatitis",
+    "authors": [
+      "T. Loranchet",
+      "D. Bystrova",
+      "P. Burgat",
+      "J. Bellet",
+      "M. Bourlière",
+      "C. Lusivika-Nzinga",
+      "J. Nicol",
+      "L. Parlati",
+      "P-Y Boëlle",
+      "F. Carrat",
+      "C. K. Assaad"
+    ],
+    "year": 2026,
+    "venue": "BMC Medical Research Methodology",
+    "type": "article",
+    "category": "publication",
+    "status": "forthcoming",
+    "personal": true,
+    "ciphod": true,
+    "paper": null,
+    "code": null,
+"abstract": "Identifying valid adjustment sets for direct causal effect estimation is a key challenge in biomedical informatics, particularly when the underlying causal structure is unknown. We propose a reusable computational pipeline combining local causal discovery with controlled direct effect (CDE) estimation for observational health data, and apply it to quantify the direct effect of diabetes on severe liver fibrosis in patients with chronic viral hepatitis.\n\nUsing baseline data from 18,065 patients enrolled in the French ANRS CO22 HEPATHER cohort, we applied the LocPC-CDE algorithm to infer a causally valid adjustment set without recovering the full causal graph. Bootstrap aggregation quantified uncertainty in variable selection. CDE estimation was performed on an independent sample (n = 2,793) via logistic regression to avoid double dipping. Robustness was assessed by varying the adjustment set selection threshold, the significance level α, the scale of continuous covariates, and through an E-value analysis.\n\nThe algorithm identified an adjustment set comprising sex, age, geographical origin, hepatitis type, history of excessive alcohol consumption, and total and HDL cholesterol. The estimated CDE of diabetes on severe liver fibrosis was significantly positive (p < 0.001), with a causal odds ratio of 1.83 (95% CI: 1.46–2.30), robust across all sensitivity analyses. The E-value of 4.18 (lower bound: 2.93) indicates that only a strong unmeasured confounder could fully explain away this association.\n\nThis study provides the first application of local causal discovery for CDE estimation under an uncertain causal structure in biomedical research. The proposed pipeline is generalizable to any observational health dataset where identifying a valid adjustment set is nontrivial, and provides robust evidence that diabetes exerts a direct positive effect on severe liver fibrosis in patients with chronic viral hepatitis.",
+    "abstract_url": null,
+    "bibtex": "@article{loranchet2026localcausaldisco,\n  author = {T. Loranchet and D. Bystrova and P. Burgat and J. Bellet and M. Bourlière and C. Lusivika-Nzinga and J. Nicol and L. Parlati and P-Y Boëlle and F. Carrat and C. K. Assaad},\n  title = {{Local causal discovery in epidemiology: quantifying the direct effect of diabetes on severe liver fibrosis in patients with viral hepatitis}},\n  year = {2026},\n  journal = {BMC Medical Research Methodology}\n}",
+    "citation": "T. Loranchet, D. Bystrova, P. Burgat, J. Bellet, M. Bourlière, C. Lusivika-Nzinga, J. Nicol, L. Parlati, P-Y Boëlle, F. Carrat and C. K. Assaad. Local causal discovery in epidemiology: quantifying the direct effect of diabetes on severe liver fibrosis in patients with viral hepatitis. BMC Medical Research Methodology. 2026."
+  },
+  {
+    "id": "scott2026missingdataandcl",
+    "title": "Missing data and cluster graphs: cluster level missingness vs variable-level missingness",
+    "authors": [
+      "W. Scott",
+      "E. Valdano",
+      "C. K. Assaad"
+    ],
+    "year": 2026,
+    "venue": "Advances in Neural Information Processing Systems (Neurips)",
+    "type": "inproceedings",
+    "category": "publication",
+    "status": "forthcoming",
+    "personal": true,
+    "ciphod": true,
+    "paper": null,
+    "code": null,
+    "abstract": "Missing data is pervasive in many scientific domains such as public health, environmental science, and the social sciences. Recoverability from missing data is typically studied using fully specified variable-level missingness models despite that, in many applications, only coarse structural information is available, for instance when variables are grouped into clusters due to limited knowledge or interpretability reasons. In this paper, we investigate recoverability from such abstract representations. We introduce two classes of cluster-based missingness graphs: the m-C-DMG, which retains variable-specific missingness indicators, and the cm-C-DMG, which aggregates missingness mechanisms at the cluster level. We formalize the notion of compatibility between these abstract graphs and underlying variable-level missingness models, and study how this abstraction affects the recoverability of probabilistic and causal queries. In particular, we give graphical conditions of recovering the joint distribution as well as graphical conditions of recovering a macro causal effect.",
+    "abstract_url": null,
+    "bibtex": "@inproceedings{scott2026missingdataandcl,\n  author = {W. Scott and E. Valdano and C. K. Assaad},\n  title = {{Missing data and cluster graphs: cluster level missingness vs variable-level missingness}},\n  year = {2026},\n  booktitle = {Advances in Neural Information Processing Systems (Neurips)}\n}",
+    "citation": "W. Scott, E. Valdano, and C. K. Assaad. Missing data and cluster graphs: cluster level missingness vs variable-level missingness. Advances in Neural Information Processing Systems (Neurips). 2026."
+  },
+  {
+    "id": "bystrova2026macrolevelcausal",
+    "title": "Macro-level causal discovery from single-time-point observations of ecological dynamical systems",
+    "authors": [
+      "D. Bystrova",
+      "C. K. Assaad",
+      "S. Si-moussi",
+      "W. Thuiller"
+    ],
+    "year": 2026,
+    "venue": "Philosophical Transactions of the Royal Society B",
+    "type": "article",
+    "category": "publication",
+    "status": "forthcoming",
+    "personal": true,
+    "ciphod": true,
+    "paper": null,
+    "code": null,
+    "abstract": "Ecologists often aim to uncover causal relations within ecological systems using observational data. However, many studies still rely mainly on correlation-based approaches, which do not support causal interpretation. Causal discovery methods have recently gained interest, particularly for ecological time-series data. Yet such data are often scarce, as collecting repeated and consistent measurements over long periods is costly, require strict continuation of protocols and is time-consuming.\n\n Consequently, ecologists have often access only to single-time-point observational data generated by dynamical systems. In this setting, unobserved past states can induce substantial unmeasured confounding, limiting the ability of standard algorithms such as PC and FCI to recover micro-level causal relations between observed variables. We show that PC and FCI can nevertheless recover meaningful causal information. In particular, they can identify specific cluster-level structures, which we call clustered super-unshielded colliders, which provide information about the partial causal ordering of macro-level variables. We further show that both algorithms can be reduced to a simple procedure, which we call RestPC, that yields the same identifiable information. We illustrate our results using simulated data and two real-world datasets: one on bird abundance, climate, and land cover, and another on soil microbial communities, environmental, terrain, and geochemical variables.",
+    "abstract_url": null,
+    "bibtex": "@article{bystrova2026macrolevelcausal,\n  author = {D. Bystrova and C. K. Assaad and S. Si-moussi and W. Thuiller},\n  title = {{Macro-level causal discovery from single-time-point observations of ecological dynamical systems}},\n  year = {2026},\n  journal = {Philosophical Transactions of the Royal Society B}\n}",
+    "citation": "D. Bystrova, C. K. Assaad, S. Si-moussi, and W. Thuiller. Macro-level causal discovery from single-time-point observations of ecological dynamical systems. Philosophical Transactions of the Royal Society B. 2026.",
+    "order": {
+      "personal": 2,
+      "ciphod": 2
+    }
+  },
+  {
+    "id": "ferreira2026averagecontrolle",
+    "title": "Average controlled and average natural micro direct effects in summary causal graphs",
+    "authors": [
+      "S. Ferreira",
+      "C. K. Assaad"
+    ],
+    "year": 2026,
+    "venue": "The 42nd Conference on Uncertainty in Artificial Intelligence (UAI)",
+    "type": "inproceedings",
+    "category": "publication",
+    "status": "published",
+    "personal": true,
+    "ciphod": true,
+    "paper": "https://openreview.net/pdf?id=Q1S3eU7Vc1",
+    "code": null,
+    "abstract": "In this paper, we investigate the identifiability of average controlled direct effects and average natural direct effects in causal systems represented by summary causal graphs, which are abstractions of full causal graphs, often used in dynamic systems where cycles and omitted temporal information complicate causal inference. Unlike in the traditional linear setting, where direct effects are typically easier to identify and estimate, non-parametric direct effects, which are crucial for handling real-world complexities, particularly in epidemiological contexts where relationships between variables (e.g., genetic, environmental, and behavioral factors) are often non-linear, are much harder to define and identify. In particular, we give sufficient conditions for identifying average controlled micro direct effect and average natural micro direct effect from summary causal graphs in the presence of hidden confounding. Furthermore, we show that the conditions given for the average controlled micro direct effect become also necessary in the setting where there is no hidden confounding and where we are only interested in identifiability by adjustment.",
+    "abstract_url": "https://openreview.net/forum?id=Q1S3eU7Vc1",
+    "bibtex": "@inproceedings{ferreira2026averagecontrolle,\n  author = {S. Ferreira and C. K. Assaad},\n  title = {{Average controlled and average natural micro direct effects in summary causal graphs}},\n  year = {2026},\n  booktitle = {The 42nd Conference on Uncertainty in Artificial Intelligence (UAI)},\n  url = {https://openreview.net/pdf?id=Q1S3eU7Vc1}\n}",
+    "citation": "S. Ferreira and C. K. Assaad. Average controlled and average natural micro direct effects in summary causal graphs. The 42nd Conference on Uncertainty in Artificial Intelligence (UAI). 2026.",
+    "order": {
+      "personal": 3,
+      "ciphod": 3
+    }
+  },
+  {
+    "id": "baldo2026regretbasedfeder",
+    "title": "Regret-based federated causal discovery with unknown interventions",
+    "authors": [
+      "F. Baldo",
+      "C. K. Assaad"
+    ],
+    "year": 2026,
+    "venue": "The 43rd International Conference on Machine Learning (ICML)",
+    "type": "inproceedings",
+    "category": "publication",
+    "status": "published",
+    "personal": true,
+    "ciphod": true,
+    "paper": "https://openreview.net/pdf?id=X1Ro597lLJ",
+    "code": null,
+    "abstract": "Most causal discovery methods recover a completed partially directed acyclic graph (CPDAG) representing a Markov equivalence class from observational data. Recent work has extended these methods to federated settings to address data decentralization and privacy constraints, but often under idealized assumptions that all clients share the same causal model. Such assumptions are unrealistic in practice, as client-specific policies, for instance, across hospitals, naturally induce heterogeneous and unknown interventions. In this work, we address federated causal discovery under unknown client-level interventions. We propose I-PERI, a novel federated algorithm that first recovers the CPDAG common to all clients and then orients additional edges by exploiting structural differences induced by interventions across clients. This yields a tighter equivalence class, which we call the 𝚽 -Markov Equivalence Class, represented by an augmented version of the CPDAG, namely, a 𝚽 -CPDAG. We provide theoretical guarantees on the convergence of I-PERI, as well as on its privacy-preserving properties, and present empirical evaluations demonstrating the effectiveness of the proposed algorithm.",
+    "abstract_url": "https://openreview.net/forum?id=X1Ro597lLJ",
+    "bibtex": "@inproceedings{baldo2026regretbasedfeder,\n  author = {F. Baldo and C. K. Assaad},\n  title = {{Regret-based federated causal discovery with unknown interventions}},\n  year = {2026},\n  booktitle = {The 43rd International Conference on Machine Learning (ICML)},\n  url = {https://openreview.net/pdf?id=X1Ro597lLJ}\n}",
+    "citation": "F. Baldo and C. K. Assaad. Regret-based federated causal discovery with unknown interventions. The 43rd International Conference on Machine Learning (ICML). 2026.",
+    "order": {
+      "personal": 4,
+      "ciphod": 4
+    }
+  },
+  {
+    "id": "loranchet2026orientabilityofc",
+    "title": "Orientability of causal relations in time series using summary causal graphs and faithful distributions",
+    "authors": [
+      "T. Loranchet",
+      "C. K. Assaad"
+    ],
+    "year": 2026,
+    "venue": "Conference on Artificial Intelligence and Statistics (AISTATS)",
+    "type": "inproceedings",
+    "category": "publication",
+    "status": "published",
+    "personal": true,
+    "ciphod": true,
+    "paper": "https://openreview.net/forum?id=CORGtiRxxo",
+    "code": null,
+    "abstract": "Understanding causal relations between temporal variables is a central challenge in time series analysis, particularly when the full causal structure is unknown. Even when the full causal structure cannot be fully specified, experts often succeed in providing a high-level abstraction of the causal graph, known as a summary causal graph, which captures the main causal relations between different time series while abstracting away micro-level details. In this work, we present conditions that guarantee the orientability of micro-level edges between temporal variables given the background knowledge encoded in a summary causal graph and assuming having access to a faithful and causally sufficient distribution with respect to the true unknown graph. Our results provide theoretical guarantees for edge orientation at the micro-level, even in the presence of cycles or bidirected edges at the macro-level. These findings offer practical guidance for leveraging SCGs to inform causal discovery in complex temporal systems and highlight the value of incorporating expert knowledge to improve causal inference from observational time series data.",
+    "abstract_url": "https://openreview.net/forum?id=CORGtiRxxo",
+    "bibtex": "@inproceedings{loranchet2026orientabilityofc,\n  author = {T. Loranchet and C. K. Assaad},\n  title = {{Orientability of causal relations in time series using summary causal graphs and faithful distributions}},\n  year = {2026},\n  booktitle = {Conference on Artificial Intelligence and Statistics (AISTATS)},\n  url = {https://openreview.net/forum?id=CORGtiRxxo}\n}",
+    "citation": "T. Loranchet and C. K. Assaad. Orientability of causal relations in time series using summary causal graphs and faithful distributions. Conference on Artificial Intelligence and Statistics (AISTATS). 2026.",
+    "order": {
+      "personal": 5,
+      "ciphod": 5
+    }
+  },
+  {
+    "id": "loranchet2026localmarkovequiv",
+    "title": "Local Markov equivalence and local causal discovery for identifying controlled direct effects",
+    "authors": [
+      "T. Loranchet",
+      "C. K. Assaad"
+    ],
+    "year": 2026,
+    "venue": "The 5th Conference on Causal Learning and Reasoning (Clear)",
+    "type": "inproceedings",
+    "category": "publication",
+    "status": "published",
+    "personal": true,
+    "ciphod": true,
+    "paper": "https://openreview.net/forum?id=1VP44jJu6S",
+    "code": null,
+    "abstract": "Identifying controlled direct effects (CDEs) is crucial across numerous scientific domains. While existing methods can identify these effects from causal directed acyclic graphs (DAGs), the true DAG is often unknown in practice. Essential graphs, which represent a Markov equivalence class of DAGs characterized by the same set of conditional independencies, provide a more practical and realistic alternative, and the PC algorithm is one of the most widely used method to learn them using conditional independence tests. However, learning the full essential graph is computationally intensive and relies on strong, untestable assumptions. In this work, we adapt the PC algorithm to recover only the portion of the graph needed for identifying CDEs. In particular, we introduce the local essential graph (LEG), a graph structure defined relative to a target variable, and present LocPC, an algorithm that learns the LEG using solely local conditional independence tests. Building on this, we develop LocPC-CDE, which extracts precisely the portion of the LEG that is both necessary and sufficient for identifying a CDE. Compared to global methods, our algorithms require less conditional independence tests and operate under weaker assumptions while maintaining theoretical guarantees. We illustrate the effectiveness of our approach on synthetic and real data.",
+    "abstract_url": "https://openreview.net/forum?id=1VP44jJu6S",
+    "bibtex": "@inproceedings{loranchet2026localmarkovequiv,\n  author = {T. Loranchet and C. K. Assaad},\n  title = {{Local Markov equivalence and local causal discovery for identifying controlled direct effects}},\n  year = {2026},\n  booktitle = {The 5th Conference on Causal Learning and Reasoning (Clear)},\n  url = {https://openreview.net/forum?id=1VP44jJu6S}\n}",
+    "citation": "T. Loranchet and C. K. Assaad. Local Markov equivalence and local causal discovery for identifying controlled direct effects. The 5th Conference on Causal Learning and Reasoning (Clear). 2026. (selected for an oral presentation)",
+    "order": {
+      "personal": 6,
+      "ciphod": 6
+    }
+  },
+  {
+    "id": "baldo2026retrievingclasse",
+    "title": "Retrieving Classes of Causal Orders with Inconsistent Knowledge Bases",
+    "authors": [
+      "F. Baldo",
+      "S. Ferreira",
+      "C. K. Assaad"
+    ],
+    "year": 2026,
+    "venue": "The 5th Conference on Causal Learning and Reasoning (Clear)",
+    "type": "inproceedings",
+    "category": "publication",
+    "status": "published",
+    "personal": true,
+    "ciphod": true,
+    "paper": "https://openreview.net/forum?id=hMaHG2AnL9",
+    "code": null,
+    "abstract": "Traditional causal discovery methods often depend on strong, untestable assumptions, making them unreliable in real-world applications. In this context, Large Language Models (LLMs) have emerged as a promising alternative for extracting causal knowledge from text-based metadata, effectively consolidating domain expertise. However, LLMs are prone to hallucinations, necessitating strategies that account for these limitations. One effective approach is to use a consistency measure as a proxy of reliability. Moreover, LLMs do not clearly distinguish direct from indirect causal relationships, complicating the discovery of causal Directed Acyclic Graphs (DAGs), which are often sparse. This ambiguity is evident in the way informal sentences are formulated in various domains. For this reason, focusing on causal orders provides a more practical and direct task for LLMs. We propose a new method for deriving abstractions of causal orders that maximizes a consistency score obtained from an LLM. Our approach begins by computing pairwise consistency scores between variables, from which we construct a semi-complete partially directed graph that consolidates these scores into an abstraction. Using this structure, we identify both a maximally oriented partially directed acyclic graph and an optimal set of acyclic tournaments that maximize consistency across all configurations. We further demonstrate how both the abstraction and the class of causal orders can be used to estimate causal effects. We evaluate our method on a wide set of causal DAGs extracted from scientific literature in epidemiology and public health. Our results show that the proposed approach can effectively recover the correct causal order, providing a reliable and practical LLM-assisted causal framework.",
+    "abstract_url": "https://openreview.net/forum?id=hMaHG2AnL9",
+    "bibtex": "@inproceedings{baldo2026retrievingclasse,\n  author = {F. Baldo and S. Ferreira and C. K. Assaad},\n  title = {{Retrieving Classes of Causal Orders with Inconsistent Knowledge Bases}},\n  year = {2026},\n  booktitle = {The 5th Conference on Causal Learning and Reasoning (Clear)},\n  url = {https://openreview.net/forum?id=hMaHG2AnL9}\n}",
+    "citation": "F. Baldo, S. Ferreira and C. K. Assaad. Retrieving Classes of Causal Orders with Inconsistent Knowledge Bases. The 5th Conference on Causal Learning and Reasoning (Clear). 2026.",
+    "order": {
+      "personal": 7,
+      "ciphod": 7
+    }
+  },
+  {
+    "id": "ferreira2025identifyingmacro_sincdmgsoverdmgs",
+    "title": "Identifying Macro Causal Effects in C-DMGs over DMGs",
+    "authors": [
+      "S. Ferreira",
+      "C. K. Assaad"
+    ],
+    "year": 2025,
+    "venue": "Advances in Neural Information Processing Systems (Neurips)",
+    "type": "inproceedings",
+    "category": "publication",
+    "status": "published",
+    "personal": true,
+    "ciphod": true,
+    "paper": "https://openreview.net/forum?id=nM9j2F7jL3",
+    "code": null,
+    "abstract": "The do-calculus is a sound and complete tool for identifying causal effects in acyclic directed mixed graphs (ADMGs) induced by structural causal models (SCMs). However, in many real-world applications, especially in high-dimensional settings, constructing a fully specified ADMG is often infeasible. This limitation has led to growing interest in partially specified causal representations, particularly through cluster-directed mixed graphs (C-DMGs), which group variables into clusters and offer a more abstract yet practical view of causal dependencies. While these representations can include cycles, recent work has shown that the do-calculus remains sound and complete for identifying macro-level causal effects in C-DMGs over ADMGs under the assumption that all clusters sizes are greater than 1. Nevertheless, real-world systems often exhibit cyclic causal dynamics at the structural level. To account for this, input-output structural causal models (ioSCMs) have been introduced as a generalization of SCMs that allow for cycles. ioSCMs induce another type of graph structure known as a directed mixed graph (DMG). Analogous to the ADMG setting, one can define C-DMGs over DMGs as high-level representations of causal relations among clusters of variables. In this paper, we prove that, unlike in the ADMG setting, the do-calculus is unconditionally sound and complete for identifying macro causal effects in C-DMGs over DMGs. Furthermore, we show that the graphical criteria for non-identifiability of macro causal effects previously established C-DMGs over ADMGs naturally extends to a subset of C-DMGs over DMGs.",
+    "abstract_url": "https://openreview.net/forum?id=nM9j2F7jL3",
+    "bibtex": "@inproceedings{ferreira2025identifyingmacro_sincdmgsoverdmgs,\n  author = {S. Ferreira and C. K. Assaad},\n  title = {{Identifying Macro Causal Effects in C-DMGs over DMGs}},\n  year = {2025},\n  booktitle = {Advances in Neural Information Processing Systems (Neurips)},\n  url = {https://openreview.net/forum?id=nM9j2F7jL3}\n}",
+    "citation": "S. Ferreira and C. K. Assaad. Identifying Macro Causal Effects in C-DMGs over DMGs. Advances in Neural Information Processing Systems (Neurips). 2025.",
+    "order": {
+      "personal": 8,
+      "ciphod": 8
+    }
+  },
+  {
+    "id": "ferreira2025identifyingmacro_incdmgsoveradmgs",
+    "title": "Identifying Macro Causal Effects in C-DMGs over ADMGs",
+    "authors": [
+      "S. Ferreira",
+      "C. K. Assaad"
+    ],
+    "year": 2025,
+    "venue": "Transactions on Machine Learning Research",
+    "type": "article",
+    "category": "publication",
+    "status": "published",
+    "personal": true,
+    "ciphod": true,
+    "paper": "https://openreview.net/pdf?id=905LEugq6R",
+    "code": null,
+    "abstract": "Causal effect identification using causal graphs is a fundamental challenge in causal inference. While extensive research has been conducted in this area, most existing methods assume the availability of fully specified directed acyclic graphs or acyclic directed mixed graphs. However, in complex domains such as medicine and epidemiology, complete causal knowledge is often unavailable, and only partial information about the system is accessible. This paper focuses on causal effect identification within partially specified causal graphs, with particular emphasis on cluster-directed mixed graphs (C-DMGs) which can represent many different acyclic directed mixed graphs (ADMGs). These graphs provide a higher-level representation of causal relationships by grouping variables into clusters, offering a more practical approach for handling complex systems. Unlike fully specified ADMGs, C-DMGs can contain cycles, which complicate their analysis and interpretation. Furthermore, their cluster-based nature introduces new challenges, as it gives rise to two distinct types of causal effects: macro causal effects and micro causal effects, each with different properties. In this work, we focus on macro causal effects, which describe the effects of entire clusters on other clusters. We establish that the do-calculus is both sound and complete for identifying these effects in C-DMGs over ADMGs when the cluster sizes are either unknown or of size greater than one.  Additionally, we provide a graphical characterization of non-identifiability for macro causal effects in these graphs.",
+    "abstract_url": "https://openreview.net/forum?id=905LEugq6R",
+    "bibtex": "@article{ferreira2025identifyingmacro_incdmgsoveradmgs,\n  author = {S. Ferreira and C. K. Assaad},\n  title = {{Identifying Macro Causal Effects in C-DMGs over ADMGs}},\n  year = {2025},\n  journal = {Transactions on Machine Learning Research},\n  url = {https://openreview.net/pdf?id=905LEugq6R}\n}",
+    "citation": "S. Ferreira and C. K. Assaad. Identifying Macro Causal Effects in C-DMGs over ADMGs. Transactions on Machine Learning Research. 2025.",
+    "order": {
+      "personal": 9,
+      "ciphod": 9
+    }
+  },
+  {
+    "id": "assaad2025towardsidentifia",
+    "title": "Towards identifiability of micro total effects in summary causal graphs with latent confounding: extension of the front-door criterion",
+    "authors": [
+      "C. K. Assaad"
+    ],
+    "year": 2025,
+    "venue": "Transactions on Machine Learning Research",
+    "type": "article",
+    "category": "publication",
+    "status": "published",
+    "personal": true,
+    "ciphod": true,
+    "paper": "https://openreview.net/forum?id=5f7YlSKG1l",
+    "code": null,
+    "abstract": "Conducting experiments to estimate total effects can be challenging due to cost, ethical concerns, or practical limitations. As an alternative, researchers often rely on causal graphs to determine whether these effects can be identified from observational data. Identifying total effects in fully specified causal graphs has received considerable attention, with Pearl's front-door criterion enabling the identification of total effects in the presence of latent confounding even when  no variable set is sufficient for adjustment. However, specifying a complete causal graph is challenging in many domains. Extending these identifiability results to partially specified graphs is crucial, particularly in dynamic systems where causal relationships evolve over time. This paper addresses the challenge of identifying total effects using a specific and well-known partially specified graph in dynamic systems called a summary causal graph, which does not specify the temporal lag between causal relations and can contain cycles. In particular, this paper presents sufficient graphical conditions for identifying total effects from observational data, even in the presence of cycles and latent confounding, and when no variable set is sufficient for adjustment.",
+    "abstract_url": "https://openreview.net/forum?id=5f7YlSKG1l",
+    "bibtex": "@article{assaad2025towardsidentifia,\n  author = {C. K. Assaad},\n  title = {{Towards identifiability of micro total effects in summary causal graphs with latent confounding: extension of the front-door criterion}},\n  year = {2025},\n  journal = {Transactions on Machine Learning Research},\n  url = {https://openreview.net/forum?id=5f7YlSKG1l}\n}",
+    "citation": "C. K. Assaad. Towards identifiability of micro total effects in summary causal graphs with latent confounding: extension of the front-door criterion. Transactions on Machine Learning Research. 2025.",
+    "order": {
+      "personal": 10,
+      "ciphod": 10
+    }
+  },
+  {
+    "id": "assaad2025causalreasoningi",
+    "title": "Causal reasoning in difference graphs",
+    "authors": [
+      "C. K. Assaad"
+    ],
+    "year": 2025,
+    "venue": "The 4th Conference on Causal Learning and Reasoning",
+    "type": "inproceedings",
+    "category": "publication",
+    "status": "published",
+    "personal": true,
+    "ciphod": true,
+    "paper": "https://openreview.net/pdf?id=yYGdFo4kKb",
+    "code": null,
+    "abstract": "Understanding causal mechanisms across different populations is essential for designing effective public health interventions. Recently, difference graphs have been introduced as a tool to visually represent causal variations between two distinct populations. While there has been progress in inferring these graphs from data through causal discovery methods, there remains a gap in systematically leveraging their potential to enhance causal reasoning. This paper addresses that gap by establishing conditions for identifying causal changes and effects using difference graphs. It specifically focuses on identifying total causal changes and total effects in a nonparametric setting, as well as direct causal changes and direct effects in a linear setting. In doing so, it provides a novel approach to causal reasoning that holds potential for various public health applications.",
+    "abstract_url": "https://openreview.net/forum?id=yYGdFo4kKb",
+    "bibtex": "@inproceedings{assaad2025causalreasoningi,\n  author = {C. K. Assaad},\n  title = {{Causal reasoning in difference graphs}},\n  year = {2025},\n  booktitle = {The 4th Conference on Causal Learning and Reasoning},\n  url = {https://openreview.net/pdf?id=yYGdFo4kKb}\n}",
+    "citation": "C. K. Assaad. Causal reasoning in difference graphs. The 4th Conference on Causal Learning and Reasoning. 2025. (selected for an oral presentation)",
+    "order": {
+      "personal": 11,
+      "ciphod": 11
+    },
+    "citation_by_site": {
+      "ciphod": "C. K. Assaad. Causal reasoning in difference graphs. The 4th Conference on Causal Learning and Reasoning (CLeaR). 2025. (selected for an oral presentation)"
+    }
+  },
+  {
+    "id": "ferreira2025identifyingmacro_atentconfounding",
+    "title": "Identifying macro conditional independencies and macro total effects in summary causal graphs with latent confounding",
+    "authors": [
+      "S. Ferreira",
+      "C. K. Assaad"
+    ],
+    "year": 2025,
+    "venue": "The 39th AAAI Conference on Artificial Intelligence",
+    "type": "inproceedings",
+    "category": "publication",
+    "status": "published",
+    "personal": true,
+    "ciphod": true,
+    "paper": "https://ojs.aaai.org/index.php/AAAI/article/view/34882",
+    "code": null,
+    "abstract": "Understanding causal relations in dynamic systems is essential in epidemiology. While causal inference methods have been extensively studied, they often rely on fully specified causal graphs, which may not always be available in complex dynamic systems. Partially specified causal graphs, and in particular summary causal graphs (SCGs), provide a simplified representation of causal relations between time series when working spacio-temporal data, omitting temporal information and focusing on causal structures between clusters of of temporal variables. Unlike fully specified causal graphs, SCGs can contain cycles, which complicate their analysis and interpretation. In addition, their cluster-based nature introduces new challenges concerning the types of queries of interest: macro queries, which involve relationships between clusters represented as vertices in the graph, and micro queries, which pertain to relationships between variables that are not directly visible through the vertices of the graph. In this paper, we first clearly distinguish between macro conditional independencies and micro conditional independencies and between macro total effects and micro total effects. Then, we demonstrate the soundness and completeness of the d-separation to identify macro conditional independencies in SCGs. Furthermore, we establish that the do-calculus is sound and complete for identifying macro total effects in SCGs. Finally, we give a graphical characterization for the non-identifiability of macro total effects in SCGs.",
+    "abstract_url": "https://ojs.aaai.org/index.php/AAAI/article/view/34882",
+    "bibtex": "@inproceedings{ferreira2025identifyingmacro_atentconfounding,\n  author = {S. Ferreira and C. K. Assaad},\n  title = {{Identifying macro conditional independencies and macro total effects in summary causal graphs with latent confounding}},\n  year = {2025},\n  booktitle = {The 39th AAAI Conference on Artificial Intelligence},\n  url = {https://ojs.aaai.org/index.php/AAAI/article/view/34882}\n}",
+    "citation": "S. Ferreira and C. K. Assaad. Identifying macro conditional independencies and macro total effects in summary causal graphs with latent confounding. The 39th AAAI Conference on Artificial Intelligence. 2025. (selected for an oral presentation)",
+    "order": {
+      "personal": 12,
+      "ciphod": 12
+    }
+  },
+  {
+    "id": "glemain2025revisitingthelin",
+    "title": "Revisiting the link between COVID-19 incidence and infection fatality rate during the first pandemic wave",
+    "authors": [
+      "B. Glemain",
+      "C. K. Assaad",
+      "W. Ghosn",
+      "P. Moulaire",
+      "X. de Lamballerie",
+      "M. Zins",
+      "G. Severi",
+      "M. Touvier",
+      "J.F. Deleuze",
+      "{SAPRIS-SERO Study Group}",
+      "N. Lapidus",
+      "F. Carrat"
+    ],
+    "year": 2025,
+    "venue": "Scientific Reports",
+    "type": "article",
+    "category": "publication",
+    "status": "published",
+    "personal": true,
+    "ciphod": true,
+    "paper": "https://www.nature.com/articles/s41598-025-99078-6",
+    "code": null,
+    "abstract": "Several studies found an association between COVID-19 incidence, cumulated over the first pandemic wave, and the risk of death for infected individuals. They attributed this association to hospital overload. We studied this association across the French departments using 82,467 serological samples and a hierarchical Bayesian model with spatial smoothing. In high-incidence areas, we hypothesized that hospital overload would increase infection fatality rate (IFR) without increasing infection hospitalization rate (IHR). The analyses were adjusted for intensive care beds per capita, age of the population, and diabetes prevalence (as a surrogate for obesity). We found that increasing departmental incidence from 3 to 9% rose IFR from 0.42 to 1.14% (difference 0.72%, 95% CI 0.49–1.01%), and IHR from 1.66 to 3.61% (difference 1.94%, 95% CI 1.18–2.80%). An increase in incidence from 6 to 12% in people under 60 was associated with an increased proportion of people over 60 among those infected, from 11.6 to 17.4% (difference 5.8%, 95% CI 2.9–8.8%). Higher incidence increased the risk of death for infected individuals and their risk of hospitalization by the same magnitude. These findings could be explained by a higher age among infected individuals in high-incidence areas, rather by than hospital overload.",
+    "abstract_url": "https://www.nature.com/articles/s41598-025-99078-6",
+    "bibtex": "@article{glemain2025revisitingthelin,\n  author = {B. Glemain and C. K. Assaad and W. Ghosn and P. Moulaire and X. de Lamballerie and M. Zins and G. Severi and M. Touvier and J.F. Deleuze and {SAPRIS-SERO Study Group} and N. Lapidus and F. Carrat},\n  title = {{Revisiting the link between COVID-19 incidence and infection fatality rate during the first pandemic wave}},\n  year = {2025},\n  journal = {Scientific Reports},\n  volume = {15},\n  pages = {15638},\n  doi = {10.1038/s41598-025-99078-6},\n  url = {https://www.nature.com/articles/s41598-025-99078-6}\n}",
+    "citation": "B. Glemain, C. K. Assaad, W. Ghosn, P. Moulaire, X. de Lamballerie, M. Zins, G. Severi, M. Touvier, J.F. Deleuze, SAPRIS-SERO Study Group, N. Lapidus, F. Carrat. Revisiting the link between COVID-19 incidence and infection fatality rate during the first pandemic wave. 2025.",
+    "order": {
+      "personal": 13,
+      "ciphod": 13
+    }
+  },
+  {
+    "id": "zan2024ontheflydetectio",
+    "title": "On the fly detection of root causes from observed data with application to IT systems",
+    "authors": [
+      "L. Zan",
+      "C. K. Assaad",
+      "E. Devijver",
+      "E. Gaussier",
+      "A. Ait-Bachir"
+    ],
+    "year": 2024,
+    "venue": "ACM International Conference on Information and Knowledge Management",
+    "type": "inproceedings",
+    "category": "publication",
+    "status": "published",
+    "personal": true,
+    "ciphod": true,
+    "paper": "https://dl.acm.org/doi/10.1145/3627673.3680010",
+    "code": null,
+    "abstract": "This paper introduces a new structural causal model tailored for representing threshold-based IT systems and presents a new algorithm designed to rapidly detect root causes of anomalies in such systems. When root causes are not causally related, the method is proven to be correct; while an extension is proposed based on the intervention of an agent to relax this assumption. Our algorithm and its agent-based extension leverage causal discovery from offline data and engage in subgraph traversal when encountering new anomalies in online data. Our extensive experiments demonstrate the superior performance of our methods, even when applied to data generated from alternative structural causal models or real IT monitoring data.",
+    "abstract_url": "https://dl.acm.org/doi/10.1145/3627673.3680010",
+    "bibtex": "@inproceedings{zan2024ontheflydetectio,\n  author = {L. Zan and C. K. Assaad and E. Devijver and E. Gaussier and A. Ait-Bachir},\n  title = {{On the fly detection of root causes from observed data with application to IT systems}},\n  year = {2024},\n  booktitle = {ACM International Conference on Information and Knowledge Management},\n  url = {https://dl.acm.org/doi/10.1145/3627673.3680010}\n}",
+    "citation": "L. Zan, C. K. Assaad, E. Devijver, E. Gaussier, and A. Ait-Bachir. On the fly detection of root causes from observed data with application to IT systems. ACM International Conference on Information and Knowledge Management. 2024.",
+    "order": {
+      "personal": 14,
+      "ciphod": 14
+    },
+    "citation_by_site": {
+      "ciphod": "L. Zan, C. K. Assaad, E. Devijver, E. Gaussier, and A. Ait-Bachir. On the fly detection of root causes from observed data with application to IT systems. ACM International Conference on Information and Knowledge Management (CIKM). 2024."
+    }
+  },
+  {
+    "id": "assaad2024identifiabilityo",
+    "title": "Identifiability of total effects from abstractions of time series causal graphs",
+    "authors": [
+      "C. K. Assaad",
+      "E. Devijver",
+      "E. Gaussier",
+      "G. Goessler",
+      "A. Meynaoui"
+    ],
+    "year": 2024,
+    "venue": "The 40th Conference on Uncertainty in Artificial Intelligence",
+    "type": "inproceedings",
+    "category": "publication",
+    "status": "published",
+    "personal": true,
+    "ciphod": true,
+    "paper": "https://proceedings.mlr.press/v244/assaad24a.html",
+    "code": null,
+    "abstract": "We study the problem of identifiability of the total effect of an intervention from observational time series only given an abstraction of the causal graph of the system. Specifically, we consider two types of abstractions: the extended summary causal graph which conflates all lagged causal relations but distinguishes between lagged and instantaneous relations; and the summary causal graph which does not give any indication about the lag between causal relations. We show that the total effect is always identifiable in extended summary causal graphs and we provide necessary and sufficient graphical conditions for identifiability in summary causal graphs. Furthermore, we provide adjustment sets allowing to estimate the total effect whenever it is identifiable.",
+    "abstract_url": "https://proceedings.mlr.press/v244/assaad24a.html",
+    "bibtex": "@inproceedings{assaad2024identifiabilityo,\n  author = {C. K. Assaad and E. Devijver and E. Gaussier and G. Goessler and A. Meynaoui},\n  title = {{Identifiability of total effects from abstractions of time series causal graphs}},\n  year = {2024},\n  booktitle = {The 40th Conference on Uncertainty in Artificial Intelligence},\n  url = {https://proceedings.mlr.press/v244/assaad24a.html}\n}",
+    "citation": "C. K. Assaad, E. Devijver, E. Gaussier, G. Goessler, and A. Meynaoui. Identifiability of total effects from abstractions of time series causal graphs. The 40th Conference on Uncertainty in Artificial Intelligence. 2024.",
+    "order": {
+      "personal": 15,
+      "ciphod": 15
+    },
+    "citation_by_site": {
+      "ciphod": "C. K. Assaad, E. Devijver, E. Gaussier, G. Goessler, and A. Meynaoui. Identifiability of total effects from abstractions of time series causal graphs. The 40th Conference on Uncertainty in Artificial Intelligence (UAI). 2024."
+    }
+  },
+  {
+    "id": "bystrova2024causaldiscoveryf",
+    "title": "Causal Discovery from Time Series with Hybrids of Constraint-Based and Noise-Based Algorithms",
+    "authors": [
+      "D. Bystrova",
+      "C. K. Assaad",
+      "J. Arbel",
+      "E. Devijver",
+      "E. Gaussier",
+      "W. Thuiller"
+    ],
+    "year": 2024,
+    "venue": "Transactions on Machine Learning Research",
+    "type": "article",
+    "category": "publication",
+    "status": "published",
+    "personal": true,
+    "ciphod": true,
+    "paper": "https://openreview.net/forum?id=PGLbZpVk2n",
+    "code": null,
+    "abstract": "Constraint-based methods and noise-based methods are two distinct families of methods proposed for uncovering causal graphs from observational data. However, both operate under strong assumptions that may be challenging to validate or could be violated in real-world scenarios. In response to these challenges, there is a growing interest in hybrid methods that amalgamate principles from both methods, showing robustness to assumption violations. This paper introduces a novel comprehensive framework for hybridizing constraint-based and noise-based methods designed to uncover causal graphs from observational time series. The framework is structured into two classes. The first class employs a noise-based strategy to identify a super graph, containing the true graph, followed by a constraint-based strategy to eliminate unnecessary edges. In the second class, a constraint-based strategy is applied to identify a skeleton, which is then oriented using a noise-based strategy. The paper provides theoretical guarantees for each class under the condition that all assumptions are satisfied, and it outlines some properties when assumptions are violated. To validate the efficacy of the framework, two algorithms from each class are experimentally tested on simulated data, realistic ecological data, and real datasets sourced from diverse applications. Notably, two novel datasets related to Information Technology monitoring are introduced within the set of considered real datasets. The experimental results underscore the robustness and effectiveness of the hybrid approaches across a broad spectrum of datasets.",
+    "abstract_url": "https://openreview.net/forum?id=PGLbZpVk2n",
+    "bibtex": "@article{bystrova2024causaldiscoveryf,\n  author = {D. Bystrova and C. K. Assaad and J. Arbel and E. Devijver and E. Gaussier and W. Thuiller},\n  title = {{Causal Discovery from Time Series with Hybrids of Constraint-Based and Noise-Based Algorithms}},\n  year = {2024},\n  journal = {Transactions on Machine Learning Research},\n  url = {https://openreview.net/forum?id=PGLbZpVk2n}\n}",
+    "citation": "D. Bystrova, C. K. Assaad, J. Arbel, E. Devijver, E. Gaussier, and W. Thuiller. Causal Discovery from Time Series with Hybrids of Constraint-Based and Noise-Based Algorithms. Transactions on Machine Learning Research. 2024.",
+    "order": {
+      "personal": 16,
+      "ciphod": 16
+    }
+  },
+  {
+    "id": "ferreira2024identifiabilityo",
+    "title": "Identifiability of Direct Effects from Summary Causal Graphs",
+    "authors": [
+      "S. Ferreira",
+      "C. K. Assaad"
+    ],
+    "year": 2024,
+    "venue": "The 38th AAAI Conference on Artificial Intelligence",
+    "type": "inproceedings",
+    "category": "publication",
+    "status": "published",
+    "personal": true,
+    "ciphod": false,
+    "paper": "https://ojs.aaai.org/index.php/AAAI/article/view/30021",
+    "code": null,
+    "abstract": "Dynamic structural causal models (SCMs) are a powerful framework for reasoning in dynamic systems about direct effects which measure how a change in one variable affects another variable while holding all other variables constant. The causal relations in a dynamic structural causal model can be qualitatively represented with an acyclic full-time causal graph. Assuming linearity and no hidden confounding and given the full-time causal graph, the direct causal effect is always identifiable. However, in many application such a graph is not available for various reasons but nevertheless experts have access to the summary causal graph of the full-time causal graph which represents causal relations between time series while omitting temporal information and allowing cycles. This paper presents a complete identifiability result which characterizes all cases for which the direct effect is graphically identifiable from a summary causal graph and gives two sound finite adjustment sets that can be used to estimate the direct effect whenever it is identifiable.",
+    "abstract_url": "https://ojs.aaai.org/index.php/AAAI/article/view/30021",
+    "bibtex": "@inproceedings{ferreira2024identifiabilityo,\n  author = {S. Ferreira and C. K. Assaad},\n  title = {{Identifiability of Direct Effects from Summary Causal Graphs}},\n  year = {2024},\n  booktitle = {The 38th AAAI Conference on Artificial Intelligence},\n  url = {https://ojs.aaai.org/index.php/AAAI/article/view/30021}\n}",
+    "citation": "S. Ferreira and C. K. Assaad. Identifiability of Direct Effects from Summary Causal Graphs. The 38th AAAI Conference on Artificial Intelligence. 2024.",
+    "order": {
+      "personal": 17
+    }
+  },
+  {
+    "id": "assaad2023rootcauseidentif",
+    "title": "Root Cause Identification for Collective Anomalies in Time Series given an Acyclic Summary Causal Graph with Loops",
+    "authors": [
+      "C. K. Assaad",
+      "I. Ez-zejjari",
+      "L. Zan"
+    ],
+    "year": 2023,
+    "venue": "The 26th International Conference on Artificial Intelligence and Statistics",
+    "type": "inproceedings",
+    "category": "publication",
+    "status": "published",
+    "personal": true,
+    "ciphod": false,
+    "paper": "https://proceedings.mlr.press/v206/assaad23a/assaad23a.pdf",
+    "code": null,
+    "abstract": "This paper presents an approach for identifying the root causes of collective anomalies given observational time series and an acyclic summary causal graph which depicts an abstraction of causal relations present in a dynamic system at its normal regime. The paper first shows how the problem of root cause identification can be divided into many independent subproblems by grouping related anomalies using d-separation. Further, it shows how, under this setting, some root causes can be found directly from the graph and from the time of appearance of anomalies. Finally, it shows, how the rest of the root causes can be found by comparing direct effects in the normal and in the anomalous regime. To this end, an adjustment set for identifying direct effects is introduced. Extensive experiments conducted on both simulated and real-world datasets demonstrate the effectiveness of the proposed method.",
+    "abstract_url": "https://proceedings.mlr.press/v206/assaad23a.html",
+    "bibtex": "@inproceedings{assaad2023rootcauseidentif,\n  author = {C. K. Assaad and I. Ez-zejjari and L. Zan},\n  title = {{Root Cause Identification for Collective Anomalies in Time Series given an Acyclic Summary Causal Graph with Loops}},\n  year = {2023},\n  booktitle = {The 26th International Conference on Artificial Intelligence and Statistics},\n  url = {https://proceedings.mlr.press/v206/assaad23a/assaad23a.pdf}\n}",
+    "citation": "C. K. Assaad , I. Ez-zejjari and L. Zan. Root Cause Identification for Collective Anomalies in Time Series given an Acyclic Summary Causal Graph with Loops. The 26th International Conference on Artificial Intelligence and Statistics. 2023.",
+    "order": {
+      "personal": 18
+    }
+  },
+  {
+    "id": "assaad2023surveyandevaluat",
+    "title": "Survey and Evaluation of Causal Discovery Methods for Time Series (Extended Abstract)",
+    "authors": [
+      "C. K. Assaad",
+      "E. Devijver",
+      "E. Gaussier"
+    ],
+    "year": 2023,
+    "venue": "The 32nd International Joint Conference on Artificial Intelligence",
+    "type": "inproceedings",
+    "category": "publication",
+    "status": "published",
+    "personal": true,
+    "ciphod": false,
+    "paper": "https://www.ijcai.org/proceedings/2023/0766.pdf",
+    "code": null,
+    "abstract": "We introduce in this survey the major concepts, models, and algorithms proposed so far to infer causal relations from observational time series, a task usually referred to as causal discovery in time series. To do so, after a description of the underlying concepts and modelling assumptions, we present different methods according to the family of approaches they belong to: Granger causality, constraint-based approaches, noise-based approaches, score-based approaches, logic-based approaches, topology-based approaches, and difference-based approaches. We then evaluate several representative methods to illustrate the behaviour of different families of approaches. This illustration is conducted on both artificial and real datasets, with different characteristics. The main conclusions one can draw from this survey is that causal discovery in times series is an active research field in which new methods (in every family of approaches) are regularly proposed, and that no family or method stands out in all situations. Indeed, they all rely on assumptions that may or may not be appropriate for a particular dataset.",
+    "abstract_url": "https://ijcai.org/proceedings/2023/766",
+    "bibtex": "@inproceedings{assaad2023surveyandevaluat,\n  author = {C. K. Assaad and E. Devijver and E. Gaussier},\n  title = {{Survey and Evaluation of Causal Discovery Methods for Time Series (Extended Abstract)}},\n  year = {2023},\n  booktitle = {The 32nd International Joint Conference on Artificial Intelligence},\n  url = {https://www.ijcai.org/proceedings/2023/0766.pdf}\n}",
+    "citation": "C. K. Assaad , E. Devijver and E. Gaussier. Survey and Evaluation of Causal Discovery Methods for Time Series (Extended Abstract). The 32nd International Joint Conference on Artificial Intelligence. 2023.",
+    "order": {
+      "personal": 19
+    }
+  },
+  {
+    "id": "atbachir2023casestudiesofcau",
+    "title": "Case Studies of Causal Discovery from IT Monitoring Time Series",
+    "authors": [
+      "A. Aït-Bachir",
+      "C. K. Assaad",
+      "C. de Bignicourt",
+      "E. Devijver",
+      "S. Ferreira",
+      "E. Gaussier",
+      "H. Mohanna",
+      "L. Zan"
+    ],
+    "year": 2023,
+    "venue": "The workshop on The History and Development of Search Methods for Causal Structure at UAI",
+    "type": "inproceedings",
+    "category": "publication",
+    "status": "published",
+    "personal": true,
+    "ciphod": false,
+    "paper": "https://arxiv.org/pdf/2307.15678.pdf",
+    "code": null,
+    "abstract": "Information technology (IT) systems are vital for modern businesses, handling data storage, communication, and process automation. Monitoring these systems is crucial for their proper functioning and efficiency, as it allows collecting extensive observational time series data for analysis. The interest in causal discovery is growing in IT monitoring systems as knowing causal relations between different components of the IT system helps in reducing downtime, enhancing system performance and identifying root causes of anomalies and incidents. It also allows proactive prediction of future issues through historical data analysis. Despite its potential benefits, applying causal discovery algorithms on IT monitoring data poses challenges, due to the complexity of the data. For instance, IT monitoring data often contains misaligned time series, sleeping time series, timestamp errors and missing values. This paper presents case studies on applying causal discovery algorithms to different IT monitoring datasets, highlighting benefits and ongoing challenges.",
+    "abstract_url": "https://arxiv.org/abs/2307.15678",
+    "bibtex": "@inproceedings{atbachir2023casestudiesofcau,\n  author = {A. Aït-Bachir and C. K. Assaad and C. de Bignicourt and E. Devijver and S. Ferreira and E. Gaussier and H. Mohanna and L. Zan},\n  title = {{Case Studies of Causal Discovery from IT Monitoring Time Series}},\n  year = {2023},\n  booktitle = {The workshop on The History and Development of Search Methods for Causal Structure at UAI},\n  url = {https://arxiv.org/pdf/2307.15678.pdf}\n}",
+    "citation": "A. Aït-Bachir, C. K. Assaad, C. de Bignicourt, E. Devijver, S. Ferreira, E. Gaussier, H. Mohanna and L. Zan. Case Studies of Causal Discovery from IT Monitoring Time Series. The workshop on The History and Development of Search Methods for Causal Structure at UAI. 2023.",
+    "order": {
+      "personal": 20
+    }
+  },
+  {
+    "id": "zan2022aconditionalmutu",
+    "title": "A Conditional Mutual Information Estimator for Mixed Data and an Associated Conditional Independence Test",
+    "authors": [
+      "L. Zan",
+      "A. Meynaoui",
+      "C. K. Assaad",
+      "E. Devijver",
+      "E. Gaussier"
+    ],
+    "year": 2022,
+    "venue": "Entropy",
+    "type": "article",
+    "category": "publication",
+    "status": "published",
+    "personal": true,
+    "ciphod": false,
+    "paper": "https://doi.org/10.3390/e24091234",
+    "code": null,
+    "abstract": "In this study, we focus on mixed data which are either observations of univariate random variables which can be quantitative or qualitative, or observations of multivariate random variables such that each variable can include both quantitative and qualitative components. We first propose a novel method, called CMIh, to estimate conditional mutual information taking advantages of the previously proposed approaches for qualitative and quantitative data. We then introduce a new local permutation test, called LocAT for local adaptive test, which is well adapted to mixed data. Our experiments illustrate the good behaviour of CMIh and LocAT, and show their respective abilities to accurately estimate conditional mutual information and to detect conditional (in)dependence for mixed data.",
+    "abstract_url": "https://doi.org/10.3390/e24091234",
+    "bibtex": "@article{zan2022aconditionalmutu,\n  author = {L. Zan and A. Meynaoui and C. K. Assaad and E. Devijver and E. Gaussier},\n  title = {{A Conditional Mutual Information Estimator for Mixed Data and an Associated Conditional Independence Test}},\n  year = {2022},\n  journal = {Entropy},\n  url = {https://doi.org/10.3390/e24091234},\n  doi = {10.3390/e24091234}\n}",
+    "citation": "L. Zan, A. Meynaoui, C. K. Assaad , E. Devijver and E. Gaussier. A Conditional Mutual Information Estimator for Mixed Data and an Associated Conditional Independence Test. Entropy. 2022.",
+    "order": {
+      "personal": 21
+    }
+  },
+  {
+    "id": "assaad2022entropybaseddisc",
+    "title": "Entropy-based Discovery of Summary Causal Graphs in Time Series",
+    "authors": [
+      "C. K. Assaad",
+      "E. Devijver",
+      "E. Gaussier"
+    ],
+    "year": 2022,
+    "venue": "Entropy",
+    "type": "article",
+    "category": "publication",
+    "status": "published",
+    "personal": true,
+    "ciphod": false,
+    "paper": "https://doi.org/10.3390/e24081156",
+    "code": null,
+    "abstract": "This study addresses the problem of learning a summary causal graph on time series with potentially different sampling rates. To do so, we first propose a new causal temporal mutual information measure for time series. We then show how this measure relates to an entropy reduction principle that can be seen as a special case of the probability raising principle. We finally combine these two ingredients in PC-like and FCI-like algorithms to construct the summary causal graph. There algorithm are evaluated on several datasets, which shows both their efficacy and efficiency.",
+    "abstract_url": "https://doi.org/10.3390/e24081156",
+    "bibtex": "@article{assaad2022entropybaseddisc,\n  author = {C. K. Assaad and E. Devijver and E. Gaussier},\n  title = {{Entropy-based Discovery of Summary Causal Graphs in Time Series}},\n  year = {2022},\n  journal = {Entropy},\n  url = {https://doi.org/10.3390/e24081156},\n  doi = {10.3390/e24081156}\n}",
+    "citation": "C. K. Assaad , E. Devijver and E. Gaussier. Entropy-based Discovery of Summary Causal Graphs in Time Series. Entropy. 2022.",
+    "order": {
+      "personal": 22
+    }
+  },
+  {
+    "id": "assaad2022causaldiscoveryo",
+    "title": "Causal Discovery of Extended Summary Graphs in Time Series",
+    "authors": [
+      "C. K. Assaad",
+      "E. Devijver",
+      "E. Gaussier"
+    ],
+    "year": 2022,
+    "venue": "The 38th Conference on Uncertainty in Artificial Intelligence",
+    "type": "inproceedings",
+    "category": "publication",
+    "status": "published",
+    "personal": true,
+    "ciphod": false,
+    "paper": "https://openreview.net/pdf?id=HtbgnDLo5l5",
+    "code": null,
+    "abstract": "This study addresses the problem of learning an extended summary causal graph from time series. The algorithms we propose fit within the well-known constraint-based framework for causal discovery and make use of information-theoretic measures to determine (in)dependencies between time series. We first introduce generalizations of the causation entropy measure to any lagged or instantaneous relations, prior to using this measure to construct extended summary causal graphs by adapting two well-known algorithms, namely PC and FCI. The behaviour of our method is illustrated through several experiments.",
+    "abstract_url": "https://openreview.net/forum?id=HtbgnDLo5l5",
+    "bibtex": "@inproceedings{assaad2022causaldiscoveryo,\n  author = {C. K. Assaad and E. Devijver and E. Gaussier},\n  title = {{Causal Discovery of Extended Summary Graphs in Time Series}},\n  year = {2022},\n  booktitle = {The 38th Conference on Uncertainty in Artificial Intelligence},\n  url = {https://openreview.net/pdf?id=HtbgnDLo5l5}\n}",
+    "citation": "C. K. Assaad , E. Devijver and E. Gaussier. Causal Discovery of Extended Summary Graphs in Time Series. The 38th Conference on Uncertainty in Artificial Intelligence. 2022.",
+    "order": {
+      "personal": 23
+    }
+  },
+  {
+    "id": "assaad2022surveyandevaluat",
+    "title": "Survey and Evaluation of Causal Discovery Methods for Time Series",
+    "authors": [
+      "C. K. Assaad",
+      "E. Devijver",
+      "E. Gaussier"
+    ],
+    "year": 2022,
+    "venue": "Journal of Artificial Intelligence Research",
+    "type": "article",
+    "category": "publication",
+    "status": "published",
+    "personal": true,
+    "ciphod": false,
+    "paper": "https://doi.org/10.1613/jair.1.13428",
+    "code": null,
+    "abstract": "We introduce in this survey the major concepts, models, and algorithms proposed so far to infer causal relations from observational time series, a task usually referred to as causal discovery in time series. To do so, after a description of the underlying concepts and modelling assumptions, we present different methods according to the family of approaches they belong to: Granger causality, constraint-based approaches, noise-based approaches, score-based approaches, logic-based approaches, topology-based approaches, and difference-based approaches. We then evaluate several representative methods to illustrate the behaviour of different families of approaches. This illustration is conducted on both artificial and real datasets, with different characteristics. The main conclusions one can draw from this survey is that causal discovery in times series is an active research field in which new methods (in every family of approaches) are regularly proposed, and that no family or method stands out in all situations. Indeed, they all rely on assumptions that may or may not be appropriate for a particular dataset.",
+    "abstract_url": "https://doi.org/10.1613/jair.1.13428",
+    "bibtex": "@article{assaad2022surveyandevaluat,\n  author = {C. K. Assaad and E. Devijver and E. Gaussier},\n  title = {{Survey and Evaluation of Causal Discovery Methods for Time Series}},\n  year = {2022},\n  journal = {Journal of Artificial Intelligence Research},\n  url = {https://doi.org/10.1613/jair.1.13428},\n  doi = {10.1613/jair.1.13428}\n}",
+    "citation": "C. K. Assaad , E. Devijver and E. Gaussier. Survey and Evaluation of Causal Discovery Methods for Time Series. Journal of Artificial Intelligence Research. 2022.",
+    "order": {
+      "personal": 24
+    }
+  },
+  {
+    "id": "assaad2021amixednoiseandco",
+    "title": "A Mixed Noise and Constraint-Based Approach to Causal Inference in Time Series",
+    "authors": [
+      "C. K. Assaad",
+      "E. Devijver",
+      "E. Gaussier",
+      "A. Ait-Bachir"
+    ],
+    "year": 2021,
+    "venue": "The European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases. Research Track. Springer, Cham",
+    "type": "inproceedings",
+    "category": "publication",
+    "status": "published",
+    "personal": true,
+    "ciphod": false,
+    "paper": "https://doi.org/10.1007/978-3-030-86486-6_28",
+    "code": null,
+    "abstract": "We address, in the context of time series, the problem of learning a summary causal graph from observations through a model with independent and additive noise. The main algorithm we propose is a hybrid method that combines the well-known constraint-based framework for causal graph discovery and the noise-based framework that gained much attention in recent years. Our method is divided into two steps. First, it uses a noise-based procedure to find the potential causes of each time series. Then, it uses a constraint-based approach to prune all unnecessary causes. A major contribution of this study is to extend the standard causation entropy measure to time series to handle lags bigger than one time step, and to rely on a lighter version of the faithfulness hypothesis, namely the adjacency faithfulness. Experiments conducted on both simulated and real-world time series show that our approach is fast and robust wrt to different causal structures and yields good results over all datasets, whereas previously proposed approaches tend to yield good results on only few datasets.",
+    "abstract_url": "https://doi.org/10.1007/978-3-030-86486-6_28",
+    "bibtex": "@inproceedings{assaad2021amixednoiseandco,\n  author = {C. K. Assaad and E. Devijver and E. Gaussier and A. Ait-Bachir},\n  title = {{A Mixed Noise and Constraint-Based Approach to Causal Inference in Time Series}},\n  year = {2021},\n  booktitle = {The European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases. Research Track. Springer, Cham},\n  url = {https://doi.org/10.1007/978-3-030-86486-6_28},\n  doi = {10.1007/978-3-030-86486-6_28}\n}",
+    "citation": "C. K. Assaad, E. Devijver, E. Gaussier and A. Ait-Bachir. A Mixed Noise and Constraint-Based Approach to Causal Inference in Time Series. The European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases. Research Track. Springer, Cham. 2021.",
+    "order": {
+      "personal": 26
+    }
+  },
+  {
+    "id": "ruer2026rootcauseanalysi",
+    "title": "Root cause analysis via difference graph discovery from linear time-series data",
+    "authors": [
+      "A. Ruer",
+      "T. Loranchet",
+      "D. Bystrova",
+      "C. K. Assaad"
+    ],
+    "year": 2026,
+    "venue": "The ECML PKDD workshop on Causal Anomalies: Exploring Synergies of Anomaly Detection and Causal Inference Workshop",
+    "type": "inproceedings",
+    "category": "workshop",
+    "status": "published",
+    "personal": false,
+    "ciphod": true,
+    "paper": "https://arxiv.org/abs/2608.21117",
+    "code": null,
+    "abstract": "Root cause analysis aims to identify the mechanisms responsible for anomalies in complex dynamical systems. In this paper, we study root cause analysis in linear time-series through the lens of difference graph discovery. We focus on effect-defying root causes, corresponding to variables whose causal coefficients change between a normal and an anomalous regime. We formalize this problem using linear discrete-time dynamic structural causal models and adapt several methods originally introduced for discovering difference graphs between two populations to the time-series setting, where the two populations are replaced by a normal and an anomalous regime. We first evaluate the proposed approaches on simulated data, and then demonstrate their practical relevance on real-world datasets from IT monitoring and intensive care monitoring. Our results show how difference graph discovery can help localize causal mechanisms responsible for anomalous behavior.",
+    "abstract_url": "https://arxiv.org/abs/2608.21117",
+    "bibtex": "@inproceedings{ruer2026rootcauseanalysi,\n  author = {A. Ruer and T. Loranchet and D. Bystrova and C. K. Assaad},\n  title = {{Root cause analysis via difference graph discovery from linear time-series data}},\n  year = {2026},\n  booktitle = {The ECML PKDD workshop on Causal Anomalies: Exploring Synergies of Anomaly Detection and Causal Inference Workshop},\n  url = {https://arxiv.org/abs/2608.21117}\n}",
+    "citation": "A. Ruer, T. Loranchet, D. Bystrova, and C. K. Assaad. Root cause analysis via difference graph discovery from linear time-series data. The ECML PKDD workshop on Causal Anomalies: Exploring Synergies of Anomaly Detection and Causal Inference Workshop. 2026.",
+    "order": {
+      "ciphod": 17
+    }
+  },
+  {
+    "id": "zan2026beyondstationari",
+    "title": "Beyond stationarity in time series: discovering causal structures and latent regimes via Markov blankets",
+    "authors": [
+      "L. Zan",
+      "C. K. Assaad",
+      "E. Devijver",
+      "Eric Gaussier"
+    ],
+    "year": 2026,
+    "venue": "The ECML PKDD workshop on Advanced Analytics and Learning on Temporal Data",
+    "type": "inproceedings",
+    "category": "workshop",
+    "status": "published",
+    "personal": false,
+    "ciphod": true,
+    "paper": "https://arxiv.org/abs/2609.05150",
+    "code": null,
+    "abstract": "This paper introduces Regime-aware Constraint-Based and Noise-Based causal discovery with Markov Blankets (RCBNB-MB), a novel causal discovery algorithm for time series that relaxes the common assumption of a single, time-consistent causal structure. Time series are typically observed at discrete time points and often exhibit regime changes that challenge the assumption of a static causal structure, a limitation in many real-world dynamic systems. To address this challenge, RCBNB-MB identifies latent causal regimes, defined as subsets of time points within which a stable causal structure holds. The algorithm follows an iterative strategy that segments the time series into regimes and discovers the causal graph within each regime. By leveraging the Markov blanket rather than direct parents, RCBNB-MB gains robustness to errors in causal discovery and preserves predictive information. We provide theoretical guarantees for RCBNB-MB's ability to recover both regime transitions and causal graphs under reasonable assumptions. Furthermore, we validate its effectiveness through extensive experiments on simulated datasets with known ground truth and real-world IT monitoring data, where taking into account regime shifts is critical. Empirical results show that RCBNB-MB systematically outperforms baseline approaches in accurately detecting regime changes and their associated causal graphs, positioning it as a robust and versatile framework for non-stationary time series analysis.",
+    "abstract_url": "https://arxiv.org/abs/2609.05150",
+    "bibtex": "@inproceedings{zan2026beyondstationari,\n  author = {L. Zan and C. K. Assaad and E. Devijver and Eric Gaussier},\n  title = {{Beyond stationarity in time series: discovering causal structures and latent regimes via Markov blankets}},\n  year = {2026},\n  booktitle = {The ECML PKDD workshop on Advanced Analytics and Learning on Temporal Data},\n  url = {https://arxiv.org/abs/2609.05150}\n}",
+    "citation": "L. Zan, C. K. Assaad, E. Devijver, and Eric Gaussier. Beyond stationarity in time series: discovering causal structures and latent regimes via Markov blankets. The ECML PKDD workshop on Advanced Analytics and Learning on Temporal Data. 2026.",
+    "order": {
+      "ciphod": 18
+    }
+  },
+  {
+    "id": "bastard2026shortandlongterm",
+    "title": "Short- and long-term causes of West Nile virus risk in Europe: a spatiotemporal model accounting for under-reporting",
+    "authors": [
+      "J. Bastard",
+      "C. K. Assaad",
+      "R. Marti",
+      "A. Tran",
+      "R. Metras",
+      "B. Durand"
+    ],
+    "year": 2026,
+    "venue": "The Bi-annual international meeting on spatial epidemiology",
+    "type": "inproceedings",
+    "category": "workshop",
+    "status": "published",
+    "personal": false,
+    "ciphod": true,
+    "paper": "https://www.medrxiv.org/content/10.64898/2026.08.20.26360902v1",
+    "code": null,
+    "abstract": null,
+    "abstract_url": "https://www.medrxiv.org/content/10.64898/2026.08.20.26360902v1",
+    "bibtex": "@inproceedings{bastard2026shortandlongterm,\n  author = {J. Bastard and C. K. Assaad and R. Marti and A. Tran and R. Metras and B. Durand},\n  title = {{Short- and long-term causes of West Nile virus risk in Europe: a spatiotemporal model accounting for under-reporting}},\n  year = {2026},\n  booktitle = {The Bi-annual international meeting on spatial epidemiology},\n  url = {https://www.medrxiv.org/content/10.64898/2026.08.20.26360902v1}\n}",
+    "citation": "J. Bastard, C. K. Assaad, R. Marti, A. Tran, R. Metras, and B. Durand. Short- and long-term causes of West Nile virus risk in Europe: a spatiotemporal model accounting for under-reporting. The Bi-annual international meeting on spatial epidemiology. 2026.",
+    "order": {
+      "ciphod": 19
+    }
+  },
+  {
+    "id": "zoumenou2026timepartitioning",
+    "title": "Time Partitioning in Target Trial Emulation",
+    "authors": [
+      "H. T. Zoumenou",
+      "S. Ferreira",
+      "C. K. Assaad",
+      "N. Lapidus",
+      "D. Bystrova",
+      "B. Glemain"
+    ],
+    "year": 2026,
+    "venue": "The 47th Annual Conference of the International Society for Clinical Biostatistics together with the 71st Annual Conference of the German Association for Medical Informatics, Biometry and Epidemiology",
+    "type": "inproceedings",
+    "category": "workshop",
+    "status": "published",
+    "personal": false,
+    "ciphod": true,
+    "paper": "https://arxiv.org/abs/2603.15924",
+    "code": null,
+    "abstract": null,
+    "abstract_url": "https://arxiv.org/abs/2603.15924",
+    "bibtex": "@inproceedings{zoumenou2026timepartitioning,\n  author = {H. T. Zoumenou and S. Ferreira and C. K. Assaad and N. Lapidus and D. Bystrova and B. Glemain},\n  title = {{Time Partitioning in Target Trial Emulation}},\n  year = {2026},\n  booktitle = {The 47th Annual Conference of the International Society for Clinical Biostatistics together with the 71st Annual Conference of the German Association for Medical Informatics, Biometry and Epidemiology},\n  url = {https://arxiv.org/abs/2603.15924}\n}",
+    "citation": "H. T. Zoumenou, S. Ferreira, C. K. Assaad, N. Lapidus, D. Bystrova, and B. Glemain. Time Partitioning in Target Trial Emulation. The 47th Annual Conference of the International Society for Clinical Biostatistics together with the 71st Annual Conference of the German Association for Medical Informatics, Biometry and Epidemiology. 2026.",
+    "order": {
+      "ciphod": 20
+    }
+  },
+  {
+    "id": "belciug2025onefficientadjus",
+    "title": "On efficient adjustment for micro causal effects in summary causal graphs",
+    "authors": [
+      "I. Belciug",
+      "S. Ferreira",
+      "C. K. Assaad"
+    ],
+    "year": 2025,
+    "venue": null,
+    "type": "misc",
+    "category": "preprint",
+    "status": "preprint",
+    "personal": false,
+    "ciphod": true,
+    "paper": "https://www.arxiv.org/abs/2512.18315",
+    "code": null,
+    "abstract": null,
+    "abstract_url": "https://www.arxiv.org/abs/2512.18315",
+    "bibtex": "@misc{belciug2025onefficientadjus,\n  author = {I. Belciug and S. Ferreira and C. K. Assaad},\n  title = {{On efficient adjustment for micro causal effects in summary causal graphs}},\n  year = {2025},\n  url = {https://www.arxiv.org/abs/2512.18315}\n}",
+    "citation": "I. Belciug, S. Ferreira and C. K. Assaad. On efficient adjustment for micro causal effects in summary causal graphs. 2025.",
+    "order": {
+      "ciphod": 21
+    }
+  },
+  {
+    "id": "yvernes2025identifiabilityb",
+    "title": "Identifiability by common backdoor in summary causal graphs of time series",
+    "authors": [
+      "C. Yvernes",
+      "C. K. Assaad",
+      "E. Devijver",
+      "Eric Gaussier"
+    ],
+    "year": 2025,
+    "venue": null,
+    "type": "misc",
+    "category": "preprint",
+    "status": "preprint",
+    "personal": false,
+    "ciphod": true,
+    "paper": "https://arxiv.org/abs/2506.14862",
+    "code": null,
+    "abstract": null,
+    "abstract_url": "https://arxiv.org/abs/2506.14862",
+    "bibtex": "@misc{yvernes2025identifiabilityb,\n  author = {C. Yvernes and C. K. Assaad and E. Devijver and Eric Gaussier},\n  title = {{Identifiability by common backdoor in summary causal graphs of time series}},\n  year = {2025},\n  url = {https://arxiv.org/abs/2506.14862}\n}",
+    "citation": "C. Yvernes, C. K. Assaad, E. Devijver, and Eric Gaussier. Identifiability by common backdoor in summary causal graphs of time series. 2025.",
+    "order": {
+      "ciphod": 22
+    }
+  }
+]
